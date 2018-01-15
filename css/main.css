@@ -49,6 +49,12 @@ p {
     color: darkgrey;
 }
 
+#PiggyCustomEnchantsShop a {
+    font-size: 14px;
+    line-height: 1.6em;
+    text-decoration: none;
+}
+
 .copyright {
     position: fixed;
     bottom: 0;

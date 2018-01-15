@@ -1,8 +1,9 @@
-# dapigguy.github.io (WIP)
+# dapigguy.github.io
 
-A website for documenting about our plugins, such as API usage, etc.</br>
-Beginner-style website. so bad lmao.
+A website for documenting about our plugins, such as API usage, plugin installation, etc.</br>
 
 ### ToDo:
-- 16, 32, 48px (maybe 64 too?) png in one ico w/ optimization.
-- fix stuff, add stuff. improve the website.
+- Prettify the home page.
+    - Header bar
+    - Dropdown menu for selecting which documentation page to enter.
+    - Footer, where support information can be found.
