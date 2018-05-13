@@ -32,8 +32,8 @@
         crates:
           example: #(crate type - name of the crate)
             drops: #(items that can be received from the crate)
-              1: #(id of drop)
-                name: "Example Item" #(name of item)
+              - name: "Example Item" #(name of item)
+				id: #(id of drop)
                 meta: 0 #(meta/dmg value of item)
                 amount: 10 #(amount of items that are received from this drop)
                 enchantments:
@@ -53,12 +53,12 @@
         crates:
           example:
             drops:
-              3:
-                name: "Unlucky Item"
+			  - name: "Unlucky Item"
+                id: 1
                 meta: 0
                 amount: 32
-              268:
-                name: "Sword of Death"
+              - name: "Sword of Death"
+			    id: 268
                 meta: 0
                 amount: 1
                 enchantments: 
