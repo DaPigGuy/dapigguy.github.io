@@ -1,98 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="PiggyDocs | PiggyCustomEnchants">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>PiggyDocs | PiggyCustomEnchants</title>
-    <link rel="icon" href="../favicon.ico">
-    <!--StyleSheets-->
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/code.css">
+    <title>PiggyDocs - PiggyCE</title>
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/prism.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--Scripts-->
-    <script src="../js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Documentation of PiggyCustomEnchants">
+    <meta name="keywords" content="DaPigGuy, PiggyCustomEnchants, PiggyCE">
+    <meta name="author" content="DaPigGuy & Aericio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
-<div class="header">
-    <p>PiggyDocs &#128055; | <a href="https://dapigguy.github.io">Return Home</a></p>
-</div>
-<nav class="navibar">
-    <li><a href="/PiggyCrates">PiggyCrates</a></li>
-    <li><a href="/PiggyCustomEnchantsShop">PiggyCustomEnchantsShop</a></li>
-    <li><a href="/PiggyTutorials">PiggyTutorials</a></li>
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/index.html">PiggyDocs</a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/PiggyCustomEnchants">PiggyCE</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/PiggyCustomEnchantsShop">PiggyCEShop</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/PiggyCrates">PiggyCrates</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/PiggyTutorials">PiggyTutorials</a>
+        </li>
+    </ul>
 </nav>
-<div class="main">
-    <p id="pluginTitle"><u>PiggyCustomEnchants</u> <a href="https://github.com/DaPigGuy/PiggyCustomEnchants"><i class="fa fa-github" aria-hidden="true"></i></a></p>
-    <div class="apiDoc">
-        <h2>API Documentation</h2>
-        <h4>To add a custom enchantment (Porkified III and Grappling I) to the item player is holding:</h4>
-        <pre><code class="lang-php">
-        $item = $player->getInventory->getItemInHand(); //$player is the player
-        $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
-        $ce->addEnchantment($item, ["Porkified", "Grappling"], [3, 1], $check); //Enchants and level can be arrays or one specific value. Check arguments is not needed unless you would like to override checks (set to true). Enchant names, ids, or classes can be used.
-        $player->getInventory()->setItemInHand($item);
-        </code></pre>
-        <h4>To add a custom enchant (Porkified III and Grappling I) to an item in a certain slot (slot 0):</h4>
-        <pre><code class="lang-php">
-        $item = $player->getInventory->getItem(0); //$player is the player
-        $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
-        $ce->addEnchantment($item, ["Porkified", "Grappling"], [3, 1], $check); //Enchants and level can be arrays or one specific value. Check arguments is not needed unless you would like to override checks (set to true). Enchant names, ids, or classes can be used.
-        $player->getInventory()->setItem(0, $item);
-        </code></pre>
-        <h4>To add an item with custom enchants (Porkified III and Grappling I):</h4>
-        <pre><code class="lang-php">
-        $item = Item::get(Item::BOW);
-        $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
-        $ce->addEnchantment($item, ["Porkified", "Grappling"], [3, 1], $check); //Enchants and level can be arrays or one specific value. Check arguments is not needed unless you would like to override checks (set to true). Enchant names, ids, or classes can be used.
-        $player->getInventory()->addItem($item); //$player is the player
-        </code></pre>
-        <h4>To remove a custom enchantment (Porkified) from the item player is holding:</h4>
-        <pre><code class="lang-php">
-        $item = $player->getInventory()->getItemInHand(); //$player is the player
-        $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
-        $ce->removeEnchantment($item, CustomEnchantsIds::PORKIFIED, $level); //Level argument is not needed unless you would like to remove an enchant with a certain level
-        $player->getInventory()->setItemInHand($item);
-        </code></pre>
-        <h4>To remove a custom enchant (Porkified) for an item in a certain slot (slot 0):</h4>
-        <pre><code class="lang-php">
-        $item = $player->getInventory()->getItem(0); //$player is the player
-        $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
-        $ce->removeEnchantment($item, CustomEnchantsIds::PORKIFIED, $level); //Level argument is not needed unless you would like to remove an enchant with a certain level
-        $player->getInventory()->setItem(0, $item);
-        </code></pre>
-        <h4>To check if a item has an enchant:</h4>
-        <pre><code class="lang-php">
-        $enchantment = $item->getEnchantment(CustomEnchantsIds::PORKIFIED); //$item is the item
-        if($enchantment !== null){
-            //Item has enchantment
-        }
-        </code></pre>
-        <h4>To check if you can enchant the item:</h4>
-        <pre><code class="lang-php">
-        $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
-        if($ce->canBeEnchanted($item, CustomEnchantsIds::PORKIFIED, 3)){
-            //Can be enchanted
-        }
-        </code></pre>
-        <h4>To register your own enchant:</h4>
-        <pre><code class="lang-php">
-        $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
-        $ce->registerEnchantment(302, "Fireworks", "Bow", "Projectile_Hit", "Uncommon", 1, "Launches fireworks on hit");
-        </code></pre>
-        <h4>To unregister an enchant:</h4>
-        <pre><code class="lang-php">
-        $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
-        $ce->unregisterEnchantment(302);
-        </code></pre>
+<main>
+    <script src="/js/prism.js"></script>
+    <div class="pce">
+        <h1>PiggyCustomEnchants <a href="https://github.com/DaPigGuy/PiggyCustomEnchants">
+            <i class="fa fa-github" aria-hidden="true"></i></a></h1>
+        <p>Welcome to PiggyCustomEnchant's Documentation! You can find here:</p>
+        <ul>
+            <li>The API Documentation of PiggyCE.</li>
+        </ul>
+        <!--API Documentation - Usage-->
+        <h3>API Documentation - Usage</h3>
+        <p>Usage of <code>$ce->addEnchantment()</code>.</p>
+        <pre>
+            <code class="language-php">
+            $ce->addEnchantment($item, $enchants, $levels, $check);
+            // $ce is the plugin.
+            // $item is the item.
+            // $enchants can be an array, or a single value. Enchantment names, ids, or classes can be used.
+            // $levels can be an array, or a single value, but has to be an integer.
+            // $checks should be a boolean - true for checks, false for none. default = true.
+            </code>
+        </pre>
+        <p>Usage of <code>$ce->removeEnchantment()</code>.</p>
+        <pre>
+            <code class="language-php">
+            $ce->removeEnchantment($item, $enchant, $level);
+            // $ce is the plugin.
+            // $item is the item.
+            // $enchant is the name of the enchant.
+            // $level is not needed unless you want to remove an enchant with a certain level. (optional)
+            </code>
+        </pre>
+        <p>Usage of <code>$item->getEnchantment()</code>.</p>
+        <pre>
+            <code class="language-php">
+            $item->getEnchantment($enchant);
+            // $item is the item.
+            // $enchant is the name of the enchant.
+            </code>
+        </pre>
+        <p>Usage of <code>$ce->canBeEnchanted()</code>.</p>
+        <pre>
+            <code class="language-php">
+            $ce->canBeEnchanted($item, $enchant, $level);
+            // $ce is the plugin.
+            // $item is the item.
+            // $enchant is the name of the enchant.
+            // $level of enchant.
+            </code>
+        </pre>
+        <p>Usage of <code>$ce->registerEnchantment()</code>.</p>
+        <pre>
+            <code class="language-php">
+            $ce->registerEnchantment($id, $name, $type, $trigger, $rarity, $maxlevel, $description = "");
+            // $ce is the plugin.
+            // $id is the id of custom enchant to be registered.
+            // $name is the name of custom enchant.
+            // $type is the item or item type which it can be applied on.
+            // $trigger is what triggers the custom enchant to activate.
+            // $rarity is the level of rarity of custom enchant.
+            // $maxlevel is the max level of custom enchant.
+            // $description is the description of custom enchant. (optional)
+            </code>
+        </pre>
+        <p>Usage of <code>$ce->unregisterEnchantment()</code>.</p>
+        <pre>
+            <code class="language-php">
+            $ce->unregisterEnchantment($id);
+            // $ce is the plugin.
+            // $id is the id of custom enchant to be unregistered.
+            </code>
+        </pre>
+        <!--API Documentation - Examples-->
+        <h3>API Documentation - Examples</h3>
+        <p>Below are examples of various methods the API can be used for. Reminder: These are <b>EXAMPLES</b>,
+            so not everything should be copied as-is.</p>
+        <p>To add custom enchant(s) to the current item player is holding:</p>
+        <pre>
+            <code class="language-php">
+            $item = $player->getInventory->getItemInHand(); //$player is the player
+            $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
+            $ce->addEnchantment($item, ["Porkified", "Grappling"], [3, 1], $check);
+            $player->getInventory()->setItemInHand($item);
+            </code>
+        </pre>
+        <p>To add custom enchant(s) to an item in a specific slot (slot 0):</p>
+        <pre>
+            <code class="language-php">
+            $item = $player->getInventory->getItem(0); //$player is the player
+            $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
+            $ce->addEnchantment($item, ["Porkified", "Grappling"], [3, 1], $check);
+            $player->getInventory()->setItem(0, $item);
+            </code>
+        </pre>
+        <p>To add custom enchant(s) to a preexisting item with custom enchants:</p>
+        <pre>
+            <code class="language-php">
+            $item = Item::get(Item::BOW);
+            $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
+            $ce->addEnchantment($item, ["Porkified", "Grappling"], [3, 1], $check);
+            $player->getInventory()->addItem($item); //$player is the player
+            </code>
+        </pre>
+        <p>To remove custom enchant(s) to the current item player is holding:</p>
+        <pre>
+            <code class="language-php">
+            $item = $player->getInventory()->getItemInHand(); //$player is the player
+            $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
+            $ce->removeEnchantment($item, CustomEnchantsIds::PORKIFIED, $level);
+            $player->getInventory()->setItemInHand($item);
+            </code>
+        </pre>
+        <p>To remove custom enchant(s) to an item in a specific slot (slot 0):</p>
+        <pre>
+            <code class="language-php">
+            $item = $player->getInventory()->getItem(0); //$player is the player
+            $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
+            $ce->removeEnchantment($item, CustomEnchantsIds::PORKIFIED, $level);
+            $player->getInventory()->setItem(0, $item);
+            </code>
+        </pre>
+        <p>To check if an item has an enchant:</p>
+        <pre>
+            <code class="language-php">
+            $enchantment = $item->getEnchantment(CustomEnchantsIds::PORKIFIED);
+            if($enchantment !== null){
+                // item has enchantment
+            }
+            </code>
+        </pre>
+        <p>To check if item can be enchanted:</p>
+        <pre>
+            <code class="language-php">
+            $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
+            if($ce->canBeEnchanted($item, CustomEnchantsIds::PORKIFIED, 3)){
+                // can be enchanted
+            }
+            </code>
+        </pre>
+        <p>To register your own enchant:</p>
+        <pre>
+            <code class="language-php">
+            $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
+            $ce->registerEnchantment(302, "Fireworks", "Bow", "Projectile_Hit", "Uncommon", 1, "Launches fireworks on hit");
+            </code>
+        </pre>
+        <p>To unregister an enchant:</p>
+        <pre>
+            <code class="language-php">
+            $ce = $this->getServer()->getPluginManager()->getPlugin("PiggyCustomEnchants");
+            $ce->unregisterEnchantment(302);
+            </code>
+        </pre>
     </div>
-    <h1>Support</h1>
-    <p>Having trouble or questions with the API usage? Contact us at our <a href="https://discordapp.com/invite/ZZewRQH">discord server</a> and we'll help you sort it out.</p>
-</div>
-<div class="copyright">
-    <p>&copy; 2018 DaPigGuy. All rights reserved.</p>
-</div>
+</main>
 </body>
 </html>

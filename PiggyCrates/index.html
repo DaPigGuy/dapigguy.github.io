@@ -1,79 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="PiggyDocs | PiggyCustomEnchants">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>PiggyDocs | PiggyCrates</title>
-    <link rel="icon" href="../favicon.ico">
-    <!--StyleSheets-->
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/code.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--Scripts-->
-    <script src="../js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <title>PiggyDocs - PiggyCrates</title>
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Documentation of PiggyCrates">
+    <meta name="keywords" content="DaPigGuy, PiggyCrates">
+    <meta name="author" content="DaPigGuy & Aericio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
-<div class="header">
-    <p>PiggyDocs &#128055; | <a href="https://dapigguy.github.io">Return Home</a></p>
-</div>
-<nav class="navibar">
-    <li><a href="/PiggyCustomEnchants">PiggyCustomEnchants</a></li>
-    <li><a href="/PiggyCustomEnchantsShop">PiggyCustomEnchantsShop</a></li>
-    <li><a href="/PiggyTutorials">PiggyTutorials</a></li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/index.html">PiggyDocs</a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/PiggyCustomEnchants">PiggyCE</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/PiggyCustomEnchantsShop">PiggyCEShop</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/PiggyCrates">PiggyCrates</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/PiggyTutorials">PiggyTutorials</a>
+        </li>
+    </ul>
 </nav>
-<div class="main">
-    <p id="pluginTitle"><u>PiggyCrates</u> <a href="https://github.com/DaPigGuy/PiggyCrates"><i class="fa fa-github" aria-hidden="true"></i></a></p>
-        <h2>Configuration Guide:</h4>
-        <h4>Default Configuration</h4>
-        <pre><code class="lang-php">
-        crates:
-          example: #(crate type - name of the crate)
-            drops: #(items that can be received from the crate)
-              - name: "Example Item" #(name of item)
-				id: #(id of drop)
-                meta: 0 #(meta/dmg value of item)
-                amount: 10 #(amount of items that are received from this drop)
-                enchantments:
-                  enchantment1:
-                    level: 1
-                  enchantment2:
-                    level: 1
-            amount: 1 #(amount of drops that can be received from opening crate)
-            block: "173:0" #(id:meta; the block under chest to determine crate type)
-        </code></pre>
-        <p>You are not limited to only two enchantments, this plugin allows for unlimited enchants as long as the enchantments are registered into pmmp.</br>
-        In other words, if you are using other enchantment plugins other than PiggyCustomEnchants or PMMP, those enchantments will also work.</p>
-        <h4>Example Configuration with/without Custom Enchants:</h4>
-        <p>With custom enchants, simply refer to the second drop item.</br> 
-        Without custom enchants, simply refer to the first drop item.</p>
-        <pre><code class="lang-php">
-        crates:
-          example:
-            drops:
-			  - name: "Unlucky Item"
-                id: 1
-                meta: 0
-                amount: 32
-              - name: "Sword of Death"
-			    id: 268
-                meta: 0
-                amount: 1
-                enchantments: 
-                  Deathbringer:
-                    level: 1
-                  Disarmor:
-                    level: 1
-            amount: 1
-            block: "133:0"
-        </code></pre>
-    <h1>Support</h1>
-    <p>Having trouble or questions with the API usage? Contact us at our <a href="https://discordapp.com/invite/ZZewRQH">discord server</a> and we'll help you sort it out.</p>
-</div>
-<div class="copyright">
-    <p>&copy; 2018 DaPigGuy. All rights reserved.</p>
-</div>
+<main>
+    <h1>PiggyCrates <a href="https://github.com/DaPigGuy/PiggyCrates">
+        <i class="fa fa-github" aria-hidden="true"></i></a></h1>
+    <p>PiggyCrates documentation has not been migrated from the old site yet.</p>
+    <p>Click <a href="/legacy/PiggyCrates">here</a> to be redirected to the old site.</p>
+</main>
 </body>
 </html>

@@ -1,0 +1,59 @@
+/**
+    General - all
+*/
+
+main {
+    margin: 55px;
+}
+
+h1 {
+    font-size: 48px !important;
+    margin-bottom: 16px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/**
+    Homepage - index.html
+*/
+
+.index h1,
+.index p {
+    width: 50%;
+    word-wrap: break-word;
+}
+
+.index h2 {
+    margin-top: 64px;
+}
+
+.index iframe {
+    position: absolute;
+    width: 20%;
+    height: 50%;
+    right: 15%;
+    top: 10%;
+}
+
+/**
+    PiggyCrates - PiggyCrates/index.html
+*/
+
+/**
+    PiggyCustomEnchants - PiggyCustomEnchants/index.html
+*/
+
+.pce h3 {
+    margin-top: 24px;
+}
+
+/**
+    PiggyCustomEnchantsShop - PiggyCustomEnchantsShop/index.html
+*/
+
+
+/**
+    PiggyTutorials - PiggyTutorials/index.html
+*/
