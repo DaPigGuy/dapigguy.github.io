@@ -3,6 +3,7 @@
 <head>
     <title>PiggyDocs - PiggyCrates</title>
     <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/prism.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
@@ -34,10 +35,137 @@
     </ul>
 </nav>
 <main>
-    <h1>PiggyCrates <a href="https://github.com/DaPigGuy/PiggyCrates">
-        <i class="fa fa-github" aria-hidden="true"></i></a></h1>
-    <p>PiggyCrates documentation has not been migrated from the old site yet.</p>
-    <p>Click <a href="/legacy/PiggyCrates">here</a> to be redirected to the old site.</p>
+    <div class="pc">
+        <script src="/js/prism.js"></script>
+        <h1>PiggyCrates <a href="https://github.com/DaPigGuy/PiggyCrates">
+            <i class="fa fa-github" aria-hidden="true"></i></a></h1>
+        <h3>Configuration Guide</h3>
+        <p>PiggyCrates works with normal enchantments and custom enchantments. In this guide, the configuration file is
+            broken down and explained. You will also find example configurations of crates with no enchants, vanilla
+            enchants, and with custom enchants.</p>
+        <h3>Breakdown of the Configuration</h3>
+        <pre>
+            <code class="language-json">
+            crates:
+              (cratename):
+                # (cratename) - name of the crate.
+                drops:
+                  # items that can be received from the crate.
+                  - name: "Item Name"
+                    # name of the item.
+                    id: (id)
+                    # (id) - id of item.
+                    meta: (meta)
+                    # (meta) - meta/dmg value of item.
+                    amount: (amount)
+                    # (amount) - amount of items that are received from this drop.
+                    enchantments:
+                      (enchantmentname):
+                        level: (level)
+                      (enchantmentname):
+                        level: (level)
+                      # (enchantmentname) - name of the enchantment to be applied.
+                      # (level) - level of the enchantment to be applied.
+                amount: (amount)
+                # (amount) - amount of drops that can be received from opening this crate.
+                block: "(id:meta)"
+                # (id:meta) - the block under chest to determine crate type.
+            </code>
+        </pre>
+        <h3>Configuration Example - with no enchants</h3>
+        <pre>
+            <code class="language-json">
+            crates:
+              Voting:
+                drops:
+                  - name: "Unlucky Dirt"
+                    id: 3
+                    meta: 0
+                    amount: 1
+                  - name: "Lucky Diamond"
+                    id: 264
+                    meta: 0
+                    amount: 1
+                  - name: "Rusty Sword"
+                    id: 267
+                    meta: 200
+                    amount: 1
+              amount: 1
+              block: "42:0"
+            </code>
+        </pre>
+        <h3>Configuration Example - with vanilla enchants</h3>
+        <pre>
+            <code class="language-json">
+            crates:
+              Uncommon:
+                drops:
+                  - name: "Knockback Stick"
+                    id: 280
+                    meta: 0
+                    amount: 1
+                    enchantments:
+                      Knockback:
+                        level: 2
+                  - name: "Lucky Diamond"
+                    id: 264
+                    meta: 0
+                    amount: 1
+                    enchantments:
+                      Efficiency:
+                        level: 5
+                  - name: "Shiny Sword"
+                    id: 267
+                    meta: 0
+                    amount: 1
+                    enchantments:
+                      Sharpness:
+                        level: 1
+                      Unbreaking:
+                        level: 1
+              amount: 1
+              block: "42:0"
+            </code>
+        </pre>
+        <h3>Configuration Example - with custom enchants</h3>
+        <pre>
+            <code class="language-json">
+            crates:
+              Rare:
+                drops:
+                  - name: "Piggy Slayer"
+                    id: 261
+                    meta: 0
+                    amount: 1
+                    enchantments:
+                      Porkified:
+                        level: 3
+                      Paralyze:
+                        level: 1
+                  - name: "Lucky Diamond"
+                    id: 264
+                    meta: 0
+                    amount: 1
+                    enchantments:
+                      Soulbound:
+                        level: 1
+                  - name: "Deathbringer"
+                    id: 268
+                    meta: 50
+                    amount: 1
+                    enchantments:
+                      Deathbringer:
+                        level: 2
+                      Disarmor:
+                        level: 1
+              amount: 2
+              block: "133:0"
+            </code>
+        </pre>
+        <p>Both Vanilla and Custom Enchants can be mixed together. There are no limits to the amount of enchants per
+            drop.</p>
+        <p id="last-updated">Last Updated: June 9, 2018.</p>
+    </div>
 </main>
 </body>
 </html>
