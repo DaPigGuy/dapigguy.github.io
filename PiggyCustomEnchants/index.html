@@ -64,14 +64,15 @@
             // $item is the item.
             // $enchant is the name of the enchant.
             // $level is not needed unless you want to remove an enchant with a certain level. (optional)
+            // $ce->removeEnchantment() should be instanceof EnchantmentInstance or CustomEnchants.
             </code>
         </pre>
         <p>Usage of <code>$item->getEnchantment()</code>:</p>
         <pre>
             <code class="language-php">
-            $item->getEnchantment($enchant);
+            $item->getEnchantment($id);
             // $item is the item.
-            // $enchant is the name of the enchant.
+            // $id is the id of the enchant.
             </code>
         </pre>
         <p>Usage of <code>$ce->canBeEnchanted()</code>:</p>
@@ -82,6 +83,7 @@
             // $item is the item.
             // $enchant is the name of the enchant.
             // $level of enchant.
+            // $ce->removeEnchantment() should be instanceof EnchantmentInstance or CustomEnchants.
             </code>
         </pre>
         <p>Usage of <code>$ce->registerEnchantment()</code>:</p>
