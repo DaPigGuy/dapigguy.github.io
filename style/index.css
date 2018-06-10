@@ -15,6 +15,11 @@ p {
     font-size: 18px;
 }
 
+#last-updated {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
 /**
     Homepage - index.html
 */
@@ -53,7 +58,6 @@ p {
     PiggyCustomEnchantsShop - PiggyCustomEnchantsShop/index.html
 */
 
-
-/**
-    PiggyTutorials - PiggyTutorials/index.html
-*/
+.pces h3 {
+    margin-top: 24px;
+}
