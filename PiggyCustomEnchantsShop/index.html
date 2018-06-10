@@ -3,6 +3,7 @@
 <head>
     <title>PiggyDocs - PiggyCEShop</title>
     <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/prism.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
@@ -35,20 +36,39 @@
 </nav>
 <main>
     <div class="pces">
+        <script src="/js/prism.js"></script>
         <h1>PiggyCustomEnchantsShop <a href="https://github.com/DaPigGuy/PiggyCustomEnchantsShop">
             <i class="fa fa-github" aria-hidden="true"></i></a></h1>
         <h3>Plugin Installation</h3>
-        <p>On this page, we will walk you through the process of installing the PiggyCustomEnchantsShop plugin with <a target="_blank" href="https://github.com/jojoe77777/FormAPI">FormsAPI by jojoe77777</a>, an optional addition to the PiggyCustomEnchantsShop plugin.</p>
-        <p><b>Step 0:</b> Ensure you have basic knowledge of opening directories, editing files, reading the steps, and understand the fundamentals of typing with a keyboard.</p>
-        <p><b>Step 1:</b> Have a functional pmmp server instance, running the latest version of pmmp. If you do not have the latest version of pmmp, download it at their <a target="_blank" href="https://jenkins.pmmp.io/job/PocketMine-MP/">Jenkins</a> site.</p>
+        <p>On this page, we will walk you through the process of installing the PiggyCustomEnchantsShop plugin with
+            <a target="_blank" href="https://github.com/jojoe77777/FormAPI">FormsAPI by jojoe77777</a>, an optional
+            addition to the PiggyCustomEnchantsShop plugin.</p>
+        <p><b>Step 0:</b> Ensure you have basic knowledge of opening directories, editing files, reading the steps,
+            and understand the fundamentals of typing with a keyboard.</p>
+        <p><b>Step 1:</b> Have a functional pmmp server instance, running the latest version of pmmp. If you do not
+            have the latest version of pmmp, download it at their
+            <a target="_blank" href="https://jenkins.pmmp.io/job/PocketMine-MP/">Jenkins</a> site.</p>
         <p><b>Step 2:</b> Download the plugins listed below, then drop them into your /plugins folder.</p>
         <ul>
-            <li><a target="_blank" href="https://poggit.pmmp.io/ci/DaPigGuy/PiggyCustomEnchants">PiggyCustomEnchants</a></li>
-            <li><a target="_blank" href="https://poggit.pmmp.io/ci/DaPigGuy/PiggyCustomEnchantsShop/PiggyCustomEnchantsShop">PiggyCustomEnchantsShop</a></li>
-            <li><a target="_blank" href="https://poggit.pmmp.io/ci/jojoe77777/FormAPI">FormAPI</a></li>
+            <li>
+                <a target="_blank" href="https://poggit.pmmp.io/ci/DaPigGuy/PiggyCustomEnchants">PiggyCustomEnchants</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://poggit.pmmp.io/ci/DaPigGuy/PiggyCustomEnchantsShop/PiggyCustomEnchantsShop">PiggyCustomEnchantsShop</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://poggit.pmmp.io/ci/jojoe77777/FormAPI">FormAPI</a>
+            </li>
         </ul>
         <p><b>Step 3:</b> Start your pmmp server.</p>
-        <p><b>Step 4:</b> In the file /plugins/PiggyCustomEnchantsShop/config.yml, set <code>shop-type: sign</code> to <code>shop-type: ui</code></p>
+        <p><b>Step 4:</b> In the file /plugins/PiggyCustomEnchantsShop/config.yml, set <code>shop-type: sign</code>
+            to <code>shop-type: ui</code>. It should look something like this:</p>
+        <pre>
+            <code class="language-json">
+            double-tap: true
+            shop-type: ui
+            </code>
+        </pre>
         <p><b>Step 5:</b> Start your pmmp server, and PiggyCustomEnchantsShop with FormsAPI has been setup!</p>
         <p id="last-updated">Last Updated: June 9, 2018.</p>
     </div>
