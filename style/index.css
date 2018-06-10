@@ -36,7 +36,8 @@ p {
 
 .index iframe {
     position: absolute;
-    width: 20%;
+    width: 25%;
+    max-width: 350px;
     height: 50%;
     right: 15%;
     top: 10%;
