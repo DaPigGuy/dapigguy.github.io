@@ -3,6 +3,7 @@
 <head>
     <title>PiggyDocs - PiggyTutorials</title>
     <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/prism.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
@@ -23,9 +24,28 @@
     </ul>
 </nav>
 <main>
-    <h1>PiggyTutorials <a href="https://github.com/DaPigGuy/PiggyTutorials">
-        <i class="fa fa-github" aria-hidden="true"></i></a></h1>
-    <p>Currently, no documentation is needed for PiggyTutorials.</p>
+    <div class="pt">
+        <script src="/js/prism.js"></script>
+        <h1>PiggyTutorials <a href="https://github.com/DaPigGuy/PiggyTutorials">
+            <i class="fa fa-github" aria-hidden="true"></i></a></h1>
+        <p>Welcome to PiggyTutorials' Documentation! You can find here:</p>
+        <ul>
+            <li><a href="#configBreakdown">Breakdown of config.yml</a></li>
+        </ul>
+        <h3 id="configBreakdown">Breakdown of config.yml</h3>
+        <ul>
+            <pre><code class="language-json">
+    tutorial:
+      messages: (messages in tutorial)
+        - "This is a tutorial!" (a message)
+        - "Do /tutorial to use" (another message)
+        - "You can edit the tutorial\nin the config.yml" (another message)
+        - "Add as many messages as you wish" (another message)
+      delay: 2 (delay between each message in seconds)
+            </code></pre>
+        </ul>
+        <p id="last-updated">Last Updated: June 14, 2018.</p>
+    </div>
 </main>
 </body>
 </html>
