@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>PiggyDocs - PiggyCEShop</title>
+<head><title>PiggyDocs - PiggyCEShop</title>
     <link rel="stylesheet" href="/style/index.css">
     <link rel="stylesheet" href="/style/prism.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
@@ -12,65 +11,112 @@
     <meta name="author" content="DaPigGuy & Aericio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
-<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/index.html">PiggyDocs</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light"><a class="navbar-brand" href="/index.html">PiggyDocs</a>
     <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="/index.html">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/PiggyCustomEnchants">PiggyCE</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/PiggyCustomEnchantsShop">PiggyCEShop</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/PiggyCrates">PiggyCrates</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/PiggyTutorials">PiggyTutorials</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/PiggyCustomEnchants">PiggyCE</a></li>
+        <li class="nav-item"><a class="nav-link" href="/PiggyCustomEnchantsShop">PiggyCEShop</a></li>
+        <li class="nav-item"><a class="nav-link" href="/PiggyCrates">PiggyCrates</a></li>
+        <li class="nav-item"><a class="nav-link" href="/PiggyTutorials">PiggyTutorials</a></li>
     </ul>
 </nav>
 <main>
     <div class="pces">
         <script src="/js/prism.js"></script>
-        <h1>PiggyCustomEnchantsShop <a href="https://github.com/DaPigGuy/PiggyCustomEnchantsShop">
-            <i class="fa fa-github" aria-hidden="true"></i></a></h1>
-        <h3>Plugin Installation</h3>
-        <p>On this page, we will walk you through the process of installing the PiggyCustomEnchantsShop plugin with
-            <a target="_blank" href="https://github.com/jojoe77777/FormAPI">FormsAPI by jojoe77777</a>, an optional
-            addition to the PiggyCustomEnchantsShop plugin.</p>
-        <p><b>Step 0:</b> Ensure you have basic knowledge of opening directories, editing files, reading the steps,
-            and understand the fundamentals of typing with a keyboard.</p>
-        <p><b>Step 1:</b> Have a functional pmmp server instance, running the latest version of pmmp. If you do not
-            have the latest version of pmmp, download it at their
-            <a target="_blank" href="https://jenkins.pmmp.io/job/PocketMine-MP/">Jenkins</a> site.</p>
-        <p><b>Step 2:</b> Download the plugins listed below, then drop them into your /plugins folder.</p>
+        <h1>PiggyCustomEnchantsShop <a href="https://github.com/DaPigGuy/PiggyCustomEnchantsShop"> <i
+                class="fa fa-github" aria-hidden="true"></i></a></h1>
+        <p>Welcome to PiggyCustomEnchantsShop's Documentation! You can find here:</p>
         <ul>
-            <li>
-                <a target="_blank" href="https://poggit.pmmp.io/ci/DaPigGuy/PiggyCustomEnchants">PiggyCustomEnchants</a>
-            </li>
-            <li>
-                <a target="_blank" href="https://poggit.pmmp.io/ci/DaPigGuy/PiggyCustomEnchantsShop/PiggyCustomEnchantsShop">PiggyCustomEnchantsShop</a>
-            </li>
-            <li>
-                <a target="_blank" href="https://poggit.pmmp.io/ci/jojoe77777/FormAPI">FormAPI</a>
-            </li>
+            <li><a href="#installationSigns">Plugin Installation for Signs</a></li>
+            <li><a href="#installationUI">Plugin Installation for UI</a></li>
+            <li><a href="#setupSigns">Shop Setup for Signs</a></li>
+            <li><a href="#setupUI">Shop Setup for UI</a></li>
         </ul>
-        <p><b>Step 3:</b> Start your pmmp server.</p>
-        <p><b>Step 4:</b> In the file /plugins/PiggyCustomEnchantsShop/config.yml, set <code>shop-type: sign</code>
-            to <code>shop-type: ui</code>. It should look something like this:</p>
-        <pre>
-            <code class="language-json">
-            double-tap: true
-            shop-type: ui
-            </code>
-        </pre>
-        <p><b>Step 5:</b> Start your pmmp server, and PiggyCustomEnchantsShop with FormsAPI has been setup!</p>
-        <p id="last-updated">Last Updated: June 9, 2018.</p>
+        <!--Plugin Installation for Signs-->
+        <h3 id="installationSigns">Plugin Installation (Signs)</h3>
+        <ul>
+            <h4>Steps</h4>
+            <ol>
+                <li>Ensure you have basic knowledge of opening directories, editing files, reading steps, and understand
+                    the
+                    fundamentals of typing with a keyboard.
+                </li>
+                <li>Have a functional PMMP server instance, running the latest version of PMMP. If you do not have the
+                    latest version of PMMP, download it at the
+                    <a target="_blank" href="https://jenkins.pmmp.io/job/PocketMine-MP/">PMMP Jenkins site.</a>
+                </li>
+                <li>Download the plugins listed below and drop them into your plugins folder.
+                    <ul>
+                        <li>
+                            <a target="_blank" href="https://poggit.pmmp.io/ci/DaPigGuy/PiggyCustomEnchants">PiggyCustomEnchants</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://poggit.pmmp.io/ci/DaPigGuy/PiggyCustomEnchantsShop/PiggyCustomEnchantsShop">PiggyCustomEnchantsShop</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>Start your PMMP server.</li>
+            </ol>
+        </ul>
+        <!--Plugin Installation for UI-->
+        <h3 id="installationUI">Plugin Installation (UI)</h3>
+        <ul>
+            <h4>Steps</h4>
+            <ol>
+                <li>Ensure you have basic knowledge of opening directories, editing files, reading steps, and
+                    understand
+                    the
+                    fundamentals of typing with a keyboard.
+                </li>
+                <li>Have a functional PMMP server instance, running the latest version of PMMP. If you do not have the
+                    latest version of PMMP, download it at the
+                    <a target="_blank" href="https://jenkins.pmmp.io/job/PocketMine-MP/">PMMP Jenkins site.</a>
+                </li>
+                <li>Download the plugins listed below and drop them into your plugins folder.
+                    <ul>
+                        <li>
+                            <a target="_blank" href="https://poggit.pmmp.io/ci/DaPigGuy/PiggyCustomEnchants">PiggyCustomEnchants</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://poggit.pmmp.io/ci/DaPigGuy/PiggyCustomEnchantsShop/PiggyCustomEnchantsShop">PiggyCustomEnchantsShop</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://poggit.pmmp.io/ci/jojoe77777/FormAPI">FormAPI</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>Start your PMMP server.</li>
+                <li>In the config.yml, set <code>shop-type: sign</code> to <code>shop-type: ui</code>. It should look
+                    something like this:
+                    <pre><code class="language-json">
+    double-tap: true
+    shop-type: ui
+                    </code></pre>
+                </li>
+                <li>Restart your PMMP server.</li>
+            </ol>
+        </ul>
+        <h3 id="setupSigns">Shop Setup (Signs)</h3>
+        <ul>
+            <h4>Steps</h4>
+            <ol>
+                <li>Make sure you have shop-type set to sign in the config.yml.</li>
+                <li>Place a sign.</li>
+                <li>Put CE on the first line.</li>
+                <li>Put the enchantment on the second line.</li>
+                <li>Put the enchantment level on the third line.</li>
+                <li>Put the price on the last line.</li>
+            </ol>
+        </ul>
+        <h3 id="setupUI">Shop Setup (UI)</h3>
+        <ul>
+            <h4>Steps</h4>
+            <ol>
+                <li>Make sure you have shop-type set to ui in the config.yml.</li>
+                <li>Use the command /ceshop add &lt;enchant&gt; &lt;level&gt; &lt;price&gt;</li>
+            </ol>
+        </ul>
+        <p id="last-updated">Last Updated: June 13, 2018.</p>
     </div>
 </main>
 </body>
