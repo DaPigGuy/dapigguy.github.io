@@ -82,3 +82,32 @@ p {
 .pt h4 {
     margin-top: 16px;
 }
+
+/***
+    Contact - Contact/index.html
+ */
+
+.contact form {
+    border-style: solid;
+}
+
+.contact form div {
+    margin: 15px 15px 15px 15px;
+}
+
+.contact input {
+    border: none;
+    border-bottom: black 2px solid;
+    outline: none;
+    height: initial;
+}
+
+.contact input:hover {
+    transition-duration: .5s;
+    border-bottom: gray 2px solid;
+}
+
+.contact input[type=submit]:hover {
+    transition-duration: 0.5s;
+    background: #eaeaea;
+}
