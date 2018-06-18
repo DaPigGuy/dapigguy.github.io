@@ -47,13 +47,13 @@
     <p>You can contact us below. Your message will be redirected to DaPigGuy & Aericio. Please try to provide contact
         information (preferably Discord) if possible.</p>
     <form onsubmit="sendMessage(); return false;" autocomplete="off">
-        <div>
-            <label>Username:</label>
-            <input id="usernameInput" title="Username" placeholder="Username" maxlength="12">
+        <div class="form-group">
+            <label for="usernameInput">Username:</label>
+            <input id="usernameInput" class="form-control" title="Username" placeholder="Username" maxlength="12">
         </div>
-        <div>
-            <label>Message:</label>
-            <input id="messageInput" title="Message" placeholder="Message" maxlength="512">
+        <div class="form-group">
+            <label for="messageInput">Message:</label>
+            <input id="messageInput" class="form-control" title="Message" placeholder="Message" maxlength="512">
         </div>
         <div>
             <input type="submit" value="Send Message">

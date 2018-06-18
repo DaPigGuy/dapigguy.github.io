@@ -24,23 +24,14 @@ p {
     Homepage - index.html
 */
 
-.index h1,
-.index p {
-    width: 50%;
-    word-wrap: break-word;
-}
-
 .index h2 {
     margin-top: 64px;
 }
 
 .index iframe {
-    position: absolute;
-    width: 25%;
+    width: 100%;
     max-width: 350px;
-    height: 50%;
-    right: 15%;
-    top: 10%;
+    height: 450px;
 }
 
 /**
@@ -98,7 +89,6 @@ p {
 .contact input {
     border: none;
     border-bottom: black 2px solid;
-    outline: none;
     height: initial;
 }
 
