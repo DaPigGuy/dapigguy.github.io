@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>PiggyDocs - Contact</title>
+    <title>PiggyDocs - PiggySpleef API</title>
     <link rel="stylesheet" href="/style/index.css">
     <link rel="stylesheet" href="/style/prism.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/MohammadYounes/AlertifyJS/006aa372/build/css/alertify.min.css">
-    <link rel="stylesheet"
-          href="https://cdn.rawgit.com/MohammadYounes/AlertifyJS/006aa372/build/css/themes/default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
-    <meta name="description" content="Contact us here!">
-    <meta name="keywords" content="DaPigGuy, PiggyCrates">
+    <meta name="description" content="Documentation of PiggySpleef (API)">
+    <meta name="keywords" content="DaPigGuy, PiggyDocs, PiggySpleef">
     <meta name="author" content="DaPigGuy & Aericio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -32,11 +29,11 @@
                 <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">PiggySpleef</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/PiggySpleef/index.html">Introduction</a>
+                    <a class="dropdown-item" href="../index.html">Introduction</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/PiggySpleef/pages/installation.html">Installation</a>
-                    <a class="dropdown-item" href="/PiggySpleef/pages/configuration.html">Configuration</a>
-                    <a class="dropdown-item" href="/PiggySpleef/pages/api.html">API</a>
+                    <a class="dropdown-item" href="installation.html">Installation</a>
+                    <a class="dropdown-item" href="configuration.html">Configuration</a>
+                    <a class="dropdown-item" href="api.html">API</a>
                 </div>
             </li>
             <li class="nav-item"><a class="nav-link" href="/PiggyTutorials">PiggyTutorials</a></li>
@@ -44,32 +41,16 @@
         </ul>
     </div>
 </nav>
-<main class="contact">
+<main>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
             integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
             crossorigin="anonymous"></script>
-    <script src="https://cdn.rawgit.com/MohammadYounes/AlertifyJS/006aa372/build/alertify.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
-    <script src="/js/contact.js"></script>
-    <h1>Contact Us</h1>
-    <p>You can contact us below. Your message will be redirected to DaPigGuy & Aericio. Please try to provide contact
-        information (preferably Discord) if possible.</p>
-    <form onsubmit="sendMessage(); return false;" autocomplete="off">
-        <div class="form-group">
-            <label for="usernameInput">Username:</label>
-            <input id="usernameInput" class="form-control" title="Username" placeholder="Username" maxlength="12">
-        </div>
-        <div class="form-group">
-            <label for="messageInput">Message:</label>
-            <input id="messageInput" class="form-control" title="Message" placeholder="Message" maxlength="512">
-        </div>
-        <div>
-            <input type="submit" value="Send Message">
-        </div>
-    </form>
+    <div class="ps-api">
+        //content
+    </div>
 </main>
 </body>
 </html>

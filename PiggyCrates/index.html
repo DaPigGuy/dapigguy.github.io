@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta name="description" content="Documentation of PiggyCrates">
-    <meta name="keywords" content="DaPigGuy, PiggyCrates">
+    <meta name="keywords" content="DaPigGuy, PiggyDocs, PiggyCrates">
     <meta name="author" content="DaPigGuy & Aericio">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -25,6 +25,17 @@
             <li class="nav-item"><a class="nav-link" href="/PiggyCustomEnchants">PiggyCE</a></li>
             <li class="nav-item"><a class="nav-link" href="/PiggyCustomEnchantsShop">PiggyCEShop</a></li>
             <li class="nav-item"><a class="nav-link" href="/PiggyCrates">PiggyCrates</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">PiggySpleef</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/PiggySpleef/index.html">Introduction</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/PiggySpleef/pages/installation.html">Installation</a>
+                    <a class="dropdown-item" href="/PiggySpleef/pages/configuration.html">Configuration</a>
+                    <a class="dropdown-item" href="/PiggySpleef/pages/api.html">API</a>
+                </div>
+            </li>
             <li class="nav-item"><a class="nav-link" href="/PiggyTutorials">PiggyTutorials</a></li>
             <li class="nav-item"><a class="nav-link" href="/Contact">Contact Us</a></li>
         </ul>
@@ -39,40 +50,41 @@
                 integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
                 crossorigin="anonymous"></script>
         <script src="/js/prism.min.js"></script>
-        <h1>PiggyCrates <a href="https://github.com/DaPigGuy/PiggyCrates">
-            <i class="fa fa-github" aria-hidden="true"></i></a></h1>
-        <p>Welcome to PiggyCrates' Documentation! You can find here:</p>
-        <ul>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#configurationGuide">Configuration Guide</a>
-                <ul>
-                    <li><a href="#crateBreakdown">Breakdown of crates.yml</a></li>
-                    <li><a href="#configBreakdown">Breakdown of config.yml</a></li>
-                </ul>
-            </li>
-            <li><a href="#examples">Examples</a>
-                <ul>
-                    <li><a href="#exampleOne">Normal Configuration</a></li>
-                    <li><a href="#exampleTwo">Vanilla Enchant Configuration</a></li>
-                    <li><a href="#exampleThree">Custom Enchant Configuration</a></li>
-                </ul>
-            </li>
-        </ul>
-        <!--Introduction-->
-        <h3 id="introduction">Introduction</h3>
-        <p>PiggyCrates is a simple, customizable, crates plugin. This plugin allows for infinite amounts of crate types.
-            We have support for <a href="https://github.com/DaPigGuy/PiggyCustomEnchants">Custom Enchants</a>, as well
-            as normal enchants. You can customize the drops, names of
-            drops, lore of drops, chances of drops, and much more. Below is a thorough explanation of the formatting of
-            crate types, as well as examples.</p>
-        <!--Configuration Guide-->
-        <h3 id="configurationGuide">Configuration Guide</h3>
-        <ul>
-            <p>Customization is one of the reasons PiggyCrates is a great crates plugin. Below is a through explanation
-                of the formatting of crate types, and what you can do with this crate plugin.</p>
-            <h4 id="crateBreakdown">Breakdown of crates.yml</h4>
-            <ul>
-                <pre><code class="language-json">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-auto">
+                    <h1>PiggyCrates <a href="https://github.com/DaPigGuy/PiggyCrates">
+                        <i class="fa fa-github" aria-hidden="true"></i></a></h1>
+                    <p>Welcome to PiggyCrates' Documentation! You can find here:</p>
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#configurationGuide">Configuration Guide</a>
+                            <ul>
+                                <li><a href="#crateBreakdown">Breakdown of crates.yml</a></li>
+                                <li><a href="#configBreakdown">Breakdown of config.yml</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#examples">Examples</a>
+                            <ul>
+                                <li><a href="#exampleOne">Normal Configuration</a></li>
+                                <li><a href="#exampleTwo">Vanilla Enchant Configuration</a></li>
+                                <li><a href="#exampleThree">Custom Enchant Configuration</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!--Introduction-->
+                    <h3 id="introduction">Introduction</h3>
+                    <p>PiggyCrates is a simple, customizable, crates plugin. This plugin allows for infinite amounts of crate types.<br>
+                        We have support for <a href="https://github.com/DaPigGuy/PiggyCustomEnchants">Custom Enchants</a>, as well as normal enchants.<br>
+                        You can customize the drops, names of drops, lore of drops, chances of drops, and much more.</p>
+                    <!--Configuration Guide-->
+                    <h3 id="configurationGuide">Configuration Guide</h3>
+                    <ul>
+                        <p>Customization is one of the reasons why PiggyCrates is a great crates plugin.</p>
+                        <p>Below is a through explanation of the formatting of crate types, and what you can do with this crate plugin.</p>
+                        <h4 id="crateBreakdown">Breakdown of crates.yml</h4>
+                        <ul>
+                        <pre><code class="language-json">
     crates:
       example: (crate type - name of the crate)
         drops: (items that can be received from the crate)
@@ -87,31 +99,32 @@
               enchantment2: (another enchantment)
                 level: 1 (level of enchantment)
             lore: Example Lore (adds a description to the item; you can use \n for a new line)
-            command: tell %player% You opened the Common Crate! (command run when item drops; you can use %PLAYER% if you want to add the name of the player)
+            command: tell %player% You opened the Common Crate! (command run when item drops; available variable: %PLAYER%)
         amount: 1 (amount of drops that can be received from opening crate)
         particle: lava (particle spawned during each drop)
         delay: 0.25 (delay between each drop)
         block: "173:0" (id:meta; the block under chest to determine crate type)
-                </code></pre>
-            </ul>
-            <h4 id="configBreakdown">Breakdown of config.yml</h4>
-            <ul>
-                <pre><code class="language-json">
+                        </code></pre>
+                        </ul>
+                        <h4 id="configBreakdown">Breakdown of config.yml</h4>
+                        <ul>
+                        <pre><code class="language-json">
     key: "131:0" (id:meta; key item)
     key-lore: "Use this key to get rewards." (description of key)
     allow-crate-changes: false (allow changes to crates; creation and destruction of crates without the permission piggycrates.crates)
-                </code></pre>
-            </ul>
-        </ul>
-        <!--Examples-->
-        <h3 id="examples">Examples</h3>
-        <ul>
-            <p>Below are examples of different crate types, including a crate with no enchants, a crate with vanilla
-                enchants, and a crate with custom enchants.</p>
-            <!--Configuration Example 1-->
-            <h4 id="exampleOne">Example with No Enchants</h4>
-            <ul>
-                <pre><code class="language-json">
+                        </code></pre>
+                        </ul>
+                    </ul>
+                    <!--Examples-->
+                    <h3 id="examples">Examples</h3>
+                    <ul>
+                        <p>Below are examples of different crate types, including a crate with no enchants, a crate with
+                            vanilla
+                            enchants, and a crate with custom enchants.</p>
+                        <!--Configuration Example 1-->
+                        <h4 id="exampleOne">Example with No Enchants</h4>
+                        <ul>
+                        <pre><code class="language-json">
     crates:
       Voting:
         drops:
@@ -132,12 +145,12 @@
             chance: 40
       amount: 1
       block: "42:0"
-                </code></pre>
-            </ul>
-            <!--Configuration Example 2-->
-            <h4 id="exampleTwo">Example with Vanilla Enchants</h4>
-            <ul>
-                <pre><code class="language-json">
+                        </code></pre>
+                        </ul>
+                        <!--Configuration Example 2-->
+                        <h4 id="exampleTwo">Example with Vanilla Enchants</h4>
+                        <ul>
+                        <pre><code class="language-json">
     crates:
       Uncommon:
         drops:
@@ -169,13 +182,13 @@
                 level: 1
       amount: 1
       block: "42:0"
-                </code></pre>
-            </ul>
+                        </code></pre>
+                        </ul>
 
-            <!--Configuration Example 3-->
-            <h4 id="exampleThree">Example with Custom Enchants</h4>
-            <ul>
-                <pre><code class="language-json">
+                        <!--Configuration Example 3-->
+                        <h4 id="exampleThree">Example with Custom Enchants</h4>
+                        <ul>
+                        <pre><code class="language-json">
     crates:
       Rare:
         drops:
@@ -209,10 +222,13 @@
                 level: 1
       amount: 2
       block: "133:0"
-                </code></pre>
-            </ul>
-        </ul>
-        <p id="last-updated">Last Updated: June 16, 2018.</p>
+                        </code></pre>
+                        </ul>
+                    </ul>
+                    <p id="last-updated">Last Updated: June 16, 2018.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 </body>
