@@ -48,8 +48,1417 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
             integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
             crossorigin="anonymous"></script>
+    <script src="/js/prism.min.js"></script>
     <div class="ps-api">
-        //content
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-auto">
+                    <h1>PiggySpleef <a href="https://github.com/DaPigGuy/PiggySpleef">
+                        <i class="fa fa-github" aria-hidden="true"></i></a></h1>
+                    <p>Welcome to PiggySpleef's API Documentation!<br>
+                        Since PiggySpleef was designed for expandability, there are an abundance of APIs to extend from!<br>
+                        You can expand the options below to quickly find usages and examples of the available API.<br>
+                    </p>
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseOne" aria-expanded="false"
+                                            aria-controls="collapseOne">
+                                        Classes
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                 data-parent="#accordion">
+                                <div class="card-body">
+                                    <li><a href="#gameManager">GameManager</a>
+                                        <ul>
+                                            <li><a href="#getGameByName()">getGameByName()</a></li>
+                                            <li><a href="#getEmptyGame()">getEmptyGame()</a></li>
+                                            <li><a href="#getGames()">getGames()</a></li>
+                                            <li><a href="#createGame()">createGame()</a></li>
+                                            <li><a href="#isPlayerInGame()">isPlayerInGame()</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#gameArena">GameArena</a>
+                                        <ul>
+                                            <li><a href="#getName()">getName()</a></li>
+                                            <li><a href="#getFloors()">getFloors()</a></li>
+                                            <li><a href="#getSpawn()">getSpawn()</a></li>
+                                            <li><a href="#getRespawn()">getRespawn()</a></li>
+                                            <li><a href="#getLobby()">getLobby()</a></li>
+                                            <li><a href="#getHub()">getHub()</a></li>
+                                            <li><a href="#getWorld()">getWorld()</a></li>
+                                            <li><a href="#resetArena()">resetArena()</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#spleefGame">SpleefGame</a>
+                                        <ul>
+                                            <li><a href="#getArena()">getArena()</a></li>
+                                            <li><a href="#getMinimumPlayers()">getMinimumPlayers()</a></li>
+                                            <li><a href="#getMaximumPlayers()">getMaximumPlayers()</a></li>
+                                            <li><a href="#getCountdownTime()">getCountdownTime()</a></li>
+                                            <li><a href="#areSnowballsEnabled()">areSnowballsEnabled()</a></li>
+                                            <li><a href="#getEffects()">getEffects()</a></li>
+                                            <li><a href="#getWinnerPrizes()">getWinnerPrizes()</a></li>
+                                            <li><a href="#getWinnerCommands()">getWinnerCommands()</a></li>
+                                            <li><a href="#getPlayers()">getPlayers()</a></li>
+                                            <li><a href="#getActivePlayers()">getActivePlayers()</a></li>
+                                            <li><a href="#getSpectators()">getSpectators()</a></li>
+                                            <li><a href="#broadcastToPlayers()">broadcastToPlayers()</a></li>
+                                            <li><a href="#broadcastTipToPlayers()">broadcastTipToPlayers()</a></li>
+                                            <li><a href="#hasCountdownStarted()">hasCountdownStarted()</a></li>
+                                            <li><a href="#hasGameStarted()">hasGameStarted()</a></li>
+                                            <li><a href="#startCountdown()">startCountdown()</a></li>
+                                            <li><a href="#abortCountdown()">abortCountdown()</a></li>
+                                            <li><a href="#startGame()">startGame()</a></li>
+                                            <li><a href="#endGame()">endGame()</a></li>
+                                            <li><a href="#isGameFull()">isGameFull()</a></li>
+                                            <li><a href="#addPlayerToGame()">addPlayerToGame()</a></li>
+                                            <li><a href="#removePlayerFromGame()">removePlayerFromGame()</a></li>
+                                            <li><a href="#isPlayer()">isPlayer()</a></li>
+                                            <li><a href="#addActivePlayer()">addActivePlayer()</a></li>
+                                            <li><a href="#removeActivePlayer()">removeActivePlayer()</a></li>
+                                            <li><a href="#isActivePlayer()">isActivePlayer()</a></li>
+                                            <li><a href="#addSpectator()">addSpectator()</a></li>
+                                            <li><a href="#removeSpectator()">removeSpectator()</a></li>
+                                            <li><a href="#isSpectator()">isSpectator()</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                        Events
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                 data-parent="#accordion">
+                                <div class="card-body">
+                                    <ul>
+                                        <li><a href="#GameEndEvent">GameEndEvent</a></li>
+                                        <li><a href="#GameStartEvent">GameStartEvent</a></li>
+                                        <li><a href="#PlayerJoinGameEvent">PlayerJoinGameEvent</a></li>
+                                        <li><a href="#PlayerLeaveGameEvent">PlayerLeaveGameEvent</a></li>
+                                        <li><a href="#PlayerLoseGameEvent">PlayerLoseGameEvent</a></li>
+                                        <li><a href="#PlayerWinGameEvent">PlayerWinGameEvent</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="margin-t32" id="classes">Classes</h3>
+                    <ul>
+                        <h4 id="gameManager">GameManager</h4>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getGameByName()">getGameByName()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getGameByName()</code> gets a game instance by arena name.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $gameManager->getGameByName($name);
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Name</h6>
+                                    <ul>
+                                        <li>The name of the arena</li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    foreach($this->getServer()->getOnlinePlayers() as $player) $game->addPlayerToGame($player);
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getEmptyGame()">getEmptyGame()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getEmptyGame()</code> gets an empty game instance.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $gameManager->getEmptyGame();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getEmptyGame();
+    $game->addPlayerToGame($sender);
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getGames()">getGames()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getGames()</code> gets all game instances.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $gameManager->getGames();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $games = $spleef->getGameManager()->getGames();
+    foreach($games as $game){
+        $this->getLogger()->debug($game->getArena()->getName() . " has " . count($game->getPlayers()) . " players out of " . $game->getMaximumPlayers() . ".");
+    }
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="createGame()">createGame()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>createGame()</code> creates a game instance.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $gameManager->createGame($name, $floors, $spawn, $respawn, $lobby, $hub, $world, $minPlayers, $maxPlayers, $countdownTime, $snowballsEnabled, $effects, $winnerPrizes, $winnerCommands);
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Name</h6>
+                                    <ul>
+                                        <li>The name of the arena</li>
+                                    </ul>
+                                    <h6>Floors</h6>
+                                    <ul>
+                                        <li>The floors of the arena. Must be an array consisting of arrays
+                                            consisting of 2 arrays with the keys <code>start</code> and
+                                            <code>end</code>, each
+                                            with 3 values for the x,
+                                            y, & z axis of the positions.
+                                        </li>
+                                    </ul>
+                                    <h6>Spawn</h6>
+                                    <ul>
+                                        <li>The spawn of the game. Must be an array consisting of 3 values for the
+                                            x, y, & z axis of the positions.
+                                        </li>
+                                    </ul>
+                                    <h6>Respawn</h6>
+                                    <ul>
+                                        <li>The respawn of the game. Must be an array consisting of 3 values for the
+                                            x, y, & z axis of the positions.
+                                        </li>
+                                    </ul>
+                                    <h6>Lobby</h6>
+                                    <ul>
+                                        <li>The lobby (waiting room) of the game. Must be an array consisting of 4
+                                            values for the
+                                            x, y, & z axis of the positions, as well as the world name.
+                                        </li>
+                                    </ul>
+                                    <h6>Hub</h6>
+                                    <ul>
+                                        <li>The hub (main spawn) of the game. Must be an array consisting of 4
+                                            values for the
+                                            x, y, & z axis of the positions, as well as the world name.
+                                        </li>
+                                    </ul>
+                                    <h6>World</h6>
+                                    <ul>
+                                        <li>The world name of the arena.</li>
+                                    </ul>
+                                    <h6>Minimum Players</h6>
+                                    <ul>
+                                        <li>The minimum amount of players needed for the game to start.</li>
+                                    </ul>
+                                    <h6>Maximum Players</h6>
+                                    <ul>
+                                        <li>The maximum amount of players allowed in a game.</li>
+                                    </ul>
+                                    <h6>Countdown Time</h6>
+                                    <ul>
+                                        <li>The amount of time for the countdown.</li>
+                                    </ul>
+                                    <h6>Snowballs Enabled</h6>
+                                    <ul>
+                                        <li>Whether or not to have snowballs enabled.</li>
+                                    </ul>
+                                    <h6>Effects</h6>
+                                    <ul>
+                                        <li>The effects granted at the beginning of the game. Must be an array.
+                                            Values must be strings, formatted as <code>id:level:duration</code></li>
+                                    </ul>
+                                    <h6>Winner Prizes</h6>
+                                    <ul>
+                                        <li>The items granted to the winner of the game. Must be an array.
+                                            Values must be strings, formatted as <code>id:damage:amount</code></li>
+                                    </ul>
+                                    <h6>Winner Commands</h6>
+                                    <ul>
+                                        <li>The commands used at the end of the game. Must be an array.
+                                            Values must be strings.
+                                        </li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $floors = [["start" => ["startX" => -5, "startY" => 1, "startZ" => -5],
+                "end" => ["endX" => 5, "endY" => 1, "endZ" => 5]];
+    $spawn = ["spawnX" => 1, "spawnY" => 1, "spawnZ" => 1];
+    $respawn = ["respawnX" => 1, "respawnY" => 1, "respawnZ" => 1];
+    $lobby = ["lobbyX" => 11, "lobbyY" => 10, "lobbyZ" => 11, "lobbyWorld" => "world"];
+    $hub = ["hubX" => 50, "hubY" => 10, "hubZ" => 50, "hubWorld" => "world"];
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $spleef->createGame("ArenaOne", $floors, $spawn, $respawn, $lobby, $hub, "world", 5, 15, false, ["1:1:30"], ["264:0:2"], ["say {PLAYER} has won a game in ArenaOne!"])
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="isPlayerInGame()">isPlayerInGame()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>isPlayerInGame()</code> checks if a player is in a game instance.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $gameManager->isPlayerInGame($player);
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>The player you would like to check for</li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    if($spleef->getGameManager()->isPlayerInGame($sender)){
+        $sender->sendMessage(TextFormat::RED . "You are already in a game.");
+    }
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+
+                        <!--      GAMEARENA      -->
+
+                        <h4 id="gameArena">GameArena</h4>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getName()">getName()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getName()</code> returns the name of the arena.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $arena->getName();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $game->broadcastToPlayers(TextFormat::GOLD . "You are playing on " . $game->getArena()->getName());
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getFloors()">getFloors()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getName()</code> returns the floors of the arena.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $arena->getFloors();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $game->broadcastToPlayers(TextFormat::GOLD . "This arena consists of " . count(game->getArena()->getFloors()) . " floors");
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getSpawn()">getSpawn()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getName()</code> returns the spawn of the arena.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $arena->getSpawn();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $spawn = $game->getArena()->getSpawn();
+    foreach($game->getPlayers() as $player){
+        $player->teleport(new Vector3($spawn["spawnX"], $spawn["spawnY"], $spawn["spawnZ"]));
+    }
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getRespawn()">getRespawn()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getRespawn()</code> returns the respawn of the arena.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $arena->getRespawn();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $respawn = $game->getArena()->getRespawn();
+    foreach($game->getPlayers() as $player){
+        $player->teleport(new Vector3($respawn["respawnX"], $respawn["respawnY"], $respawn["respawnZ"]));
+    }
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getLobby()">getLobby()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getLobby()</code> returns the lobby of the arena.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $arena->getLobby();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $lobby = $game->getArena()->getLobby();
+    foreach($game->getPlayers() as $player){
+        $player->teleport(new Position($lobby["lobbyX"], $lobby["lobbyY"], $lobby["lobbyZ"], $lobby["lobbyWorld"]));
+    }
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getHub()">getHub()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getHub()</code> returns the hub of the arena.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $arena->getHub();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $hub = $game->getArena()->getHub();
+    foreach($game->getPlayers() as $player){
+        $player->teleport(new Position($hub["hubZ"], $hub["hubY"], $hub["hubZ"], $hub["hubWorld"]));
+    }
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getWorld()">getWorld()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getWorld()</code> returns the world of the arena.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $arena->getWorld();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName($args[0]);
+    $sender->sendMessage(TextFormat::GREEN . "The arena " . $args[0] . " is in the world " . $game->getArena()->getWorld() . ".");
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="resetArena()">resetArena()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>resetArena()</code> resets the arena.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $arena->resetArena();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $game->getArena()->resetArena();
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+
+                        <!--      SPLEEFGAME      -->
+
+                        <h4 id="spleefGame">SpleefGame</h4>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getArena()">getArena()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getArena()</code> returns the arena.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->getArena();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $arena = $game->getArena();
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getMinimumPlayers()">getMinimumPlayers()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getMinimumPlayers()</code> returns the minimum amount of players required.
+                                </ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->getMinimumPlayers();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $this->getLogger()->debug($game->getMinimumPlayers() - count($game->getPlayers() . " players required in ArenaOne.");
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getMaximumPlayers()">getMaximumPlayers()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getMaximumPlayers()</code> returns the maximum amount of players allowed.
+                                </ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->getMaximumPlayers();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $this->getLogger()->debug($game->getMaximumPlayers() - count($game->getPlayers() . " players can join ArenaOne.");
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getCountdownTime()">getCountdownTime()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getCountdownTime()</code> returns the duration of the countdown.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->getCountdownTime();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $countdownTime = $game->getCountdownTime();
+    $this->getLogger()->debug("ArenaOne countdown time: " . $countdownTime);
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="areSnowballsEnabled()">areSnowballsEnabled()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>areSnowballsEnabled()</code> returns whether or not snowballs are enabled.
+                                </ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->areSnowballsEnabled();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $this->getLogger()->debug("Snowballs are " . ($game->areSnowballsEnabled() ? "enabled" : "not enabled") . " in ArenaOne");
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getEffects()">getEffects()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getEffects()</code> returns the effects granted at the start of a game.
+                                </ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->getEffects();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    var_dump($game->getEffects());
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getWinnerPrizes()">getWinnerPrizes()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getWinnerPrizes()</code> returns the items given to winners.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->getWinnerPrizes();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    var_dump($game->getWinnerPrizes());
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getWinnerCommands()">getWinnerCommands()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getWinnerCommands()</code> returns the commands used at the end of a game.
+                                </ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->getWinnerCommands();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    var_dump($game->getWinnerCommands());
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getPlayers()">getPlayers()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getPlayers()</code> returns <code>players</code></ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->getPlayers();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $getNames = function($player){
+        return $player->getName();
+    }
+    $this->getLogger()->debug("The players in ArenaOne are: " . implode(", ", array_map($getNames, $game->getPlayers())));
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getActivePlayers()">getActivePlayers()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getActivePlayers()</code> returns <code>activePlayers</code></ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->getActivePlayers();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $getNames = function($player){
+        return $player->getName();
+    }
+    $this->getLogger()->debug("The active players in ArenaOne are: " . implode(", ", array_map($getNames, $game->getActivePlayers())));
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="getSpectators()">getSpectators()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>getSpectators()</code> returns <code>spectators</code></ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->getSpectators();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $getNames = function($player){
+        return $player->getName();
+    }
+    $this->getLogger()->debug("The spectators in ArenaOne are: " . implode(", ", array_map($getNames, $game->getSpectators())));
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="broadcastToPlayers()">broadcastToPlayers()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>broadcastToPlayers()</code> broadcasts message to all players in a game.
+                                </ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->broadcastToPlayers($message);
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Message</h6>
+                                    <ul>
+                                        <li>Message to broadcast</li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $game->broadcastToPlayers("This is a chat message broadcast.");
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="broadcastTipToPlayers()">broadcastTipToPlayers()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>broadcastTipToPlayers()</code> broadcasts tip message to all players in
+                                    a game.
+                                </ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->broadcastTipToPlayers($message);
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Message</h6>
+                                    <ul>
+                                        <li>Message to broadcast</li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $game->broadcastToPlayers("This is a tip message broadcast.");
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="hasCountdownStarted()">hasCountdownStarted()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>hasCountdownStarted()</code> returns if the countdown has started.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->hasCountdownStarted();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $this->getLogger()->debug("ArenaOne's countdown has " . ($game->hasCountdownStarted() ? "" : "not") . "started.");
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="hasGameStarted()">hasGameStarted()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>hasGameStarted()</code> returns if the game has started</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->hasGameStarted();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $this->getLogger()->debug("ArenaOne has " . ($game->hasGameStarted() ? "" : "not") . "started.");
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="startCountdown()">startCountdown()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>startCountdown()</code> starts the countdown.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->startCountdown();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $game->startCountdown();
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="abortCountdown()">abortCountdown()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>abortCountdown()</code> aborts the countdown.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->abortCountdown();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $game->abortCountdown();
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="startGame()">startGame()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>startGame()</code> starts the game.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->startGame();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $game->startGame();
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="endGame()">endGame()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>endGame()</code> ends the game</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->endGame();
+                                        </code></pre>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName("ArenaOne");
+    $game->endGame();
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="isGameFull()">isGameFull()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>isGameFull()</code> checks if the game is full.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->isGameFull();
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>Name of Player</li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName($args[0]);
+    $sender->sendMessage("The game is " . ($game->isGameFull() ? "" : "not") ." full.");
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="addPlayerToGame()">addPlayerToGame()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>addPlayerToGame()</code> adds a player to the game.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->addPlayerToGame($player);
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>The player to add.</li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName($args[0]);
+    $game->addPlayerToGame($sender);
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="removePlayerFromGame()">removePlayerFromGame()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>removePlayerFromGame()</code> removes a player from the game.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->removePlayerFromGame($player);
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>The player to remove.</li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName($args[0]);
+    $game->removePlayerFromGame($sender);
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="isPlayer()">isPlayer()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>isPlayer()</code> checks if a player is in the game.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->isPlayer($player);
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>The player to check.</li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName($args[0]);
+    if($game->isPlayer($player)) $game->removeFromGame($sender);
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="addActivePlayer()">addActivePlayer()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>addActivePlayer()</code> adds a player as an active player in a game.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->addActivePlayer($player);
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>The player to add.</li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName($args[0]);
+    $game->addActivePlayer($sender);
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="removeActivePlayer()">removeActivePlayer()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>startGame()</code> removes a player as an active player in a game.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->removeActivePlayer($player);
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>The player to remove.</li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName($args[0]);
+    $game->removeActivePlayer($sender);
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="isActivePlayer()">isActivePlayer()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>isActivePlayer()</code> checks if the player is an active player.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->isActivePlayer($player);
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>The player to check for.</li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName($args[0]);
+    if($game->isActivePlayer($sender)) $game->removeActivePlayer($sender);
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="addSpectator()">addSpectator()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>addSpectator()</code> adds a player as a spectator</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->addSpectator($player);
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>The player to add.</li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName($args[0]);
+    $game->addSpectator($sender);
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="removeSpectator()">removeSpectator()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>startGame()</code> removes player as spectator</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->removeSpectator($player);
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>The player to remove.</li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName($args[0]);
+    $game->removeSpectator($sender);
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    FUNCTION      -->
+                        <div class="margin-t32">
+                            <h5 id="isSpectator()">isSpectator()</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>isSpectator()</code> checks if player is a spectator</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $game->isSpectator($player);
+                                        </code></pre>
+                                </ul>
+                                <h6>Parameters</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>The player to check.</li>
+                                    </ul>
+                                </ul>
+                                <h6>Example</h6>
+                                <ul>
+                                        <pre><code class="language-php">
+    $spleef = $this->getServer()->getPluginManager()->getPlugin("PiggySpleef");
+    $game = $spleef->getGameManager()->getGameByName($args[0]);
+    if($game->isSpectator($sender)) $game->removeSpectator($sender);
+                                        </code></pre>
+                                </ul>
+                            </ul>
+                        </div>
+                    </ul>
+
+                    <!--      EVENTS      -->
+
+                    <h3 id="events">Events</h3>
+                    <ul>
+                        <!--    EVENT      -->
+                        <div class="margin-t32">
+                            <h5 id="GameEndEvent">GameEndEvent</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>GameEndEvent</code> is called when a game ends.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                    <pre><code class="language-php">
+    public function onGameEnd(GameEndEvent $event){}
+                                    </code></pre>
+                                </ul>
+                                <h6>Fields</h6>
+                                <ul>
+                                    <h6>Game</h6>
+                                    <ul>
+                                        <li>The game that has ended.</li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    EVENT      -->
+                        <div class="margin-t32">
+                            <h5 id="GameStartEvent">GameStartEvent</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>GameStartEvent</code> is called when a game starts.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                    <pre><code class="language-php">
+    public function onGameStart(GameStartEvent $event){}
+                                    </code></pre>
+                                </ul>
+                                <h6>Fields</h6>
+                                <ul>
+                                    <h6>Game</h6>
+                                    <ul>
+                                        <li>The game that has started.</li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    EVENT      -->
+                        <div class="margin-t32">
+                            <h5 id="PlayerJoinGameEvent">PlayerJoinGameEvent</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>PlayerJoinGameEvent</code> is called when a player joins a game.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                    <pre><code class="language-php">
+    public function onPlayerJoinGame(PlayerJoinGameEvent $event){}
+                                    </code></pre>
+                                </ul>
+                                <h6>Fields</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>The player that has joined.</li>
+                                    </ul>
+                                    <h6>Game</h6>
+                                    <ul>
+                                        <li>The game the player has joined.</li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    EVENT      -->
+                        <div class="margin-t32">
+                            <h5 id="PlayerLeaveGameEvent">PlayerLeaveGameEvent</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>PlayerLeaveGameEvent</code> is called when a player leaves a game.</ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                    <pre><code class="language-php">
+    public function onPlayerLeaveGame(PlayerLeaveGameEvent $event){}
+                                    </code></pre>
+                                </ul>
+                                <h6>Fields</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>The player that has left.</li>
+                                    </ul>
+                                    <h6>Game</h6>
+                                    <ul>
+                                        <li>The game the player has left.</li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    EVENT      -->
+                        <div class="margin-t32">
+                            <h5 id="PlayerLoseGameEvent">PlayerLoseGameEvent</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>PlayerLoseGameEvent</code> is called when a player loses a game.
+                                </ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                    <pre><code class="language-php">
+    public function onPlayerLoseGame(PlayerLoseGameEvent $event){}
+                                    </code></pre>
+                                </ul>
+                                <h6>Fields</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>The player that has lost.</li>
+                                    </ul>
+                                    <h6>Game</h6>
+                                    <ul>
+                                        <li>The game in which the player has lost.</li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </div>
+                        <!--    EVENT      -->
+                        <div class="margin-t32">
+                            <h5 id="PlayerWinGameEvent">PlayerWinGameEvent</h5>
+                            <ul>
+                                <h6>Description</h6>
+                                <ul><code>PlayerWinGameEvent</code> is called when a player wins a game.
+                                </ul>
+                                <h6>Usage</h6>
+                                <ul>
+                                    <pre><code class="language-php">
+    public function onPlayerWinGame(PlayerWinGameEvent $event){}
+                                    </code></pre>
+                                </ul>
+                                <h6>Fields</h6>
+                                <ul>
+                                    <h6>Player</h6>
+                                    <ul>
+                                        <li>The player that has won.</li>
+                                    </ul>
+                                    <h6>Game</h6>
+                                    <ul>
+                                        <li>The game in which the player has won.</li>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </div>
+                        <p id="last-updated">Last Updated: June 29, 2018.</p>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
 </body>

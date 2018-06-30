@@ -1,9 +1,10 @@
 /**
-    General - all
+    General
 */
 
 main {
-    margin: 55px;
+    margin-top: 55px;
+    margin-left: 55px;
 }
 
 h1 {
@@ -21,8 +22,36 @@ p {
 }
 
 /**
-    Homepage - index.html
+    Margin Classes
 */
+
+.margin-t16 {
+    margin-top: 16px;
+}
+
+.margin-t32 {
+    margin-top: 32px;
+}
+
+.margin-t64 {
+    margin-top: 64px;
+}
+
+.margin-l32 {
+    margin-left: 32px;
+}
+
+.margin-l64 {
+    margin-left: 64px;
+}
+
+/**
+    Homepage
+*/
+
+#index {
+    margin: 55px;
+}
 
 .index h2 {
     margin-top: 64px;
@@ -35,7 +64,7 @@ p {
 }
 
 /**
-    PiggyCrates - PiggyCrates/index.html
+    PiggyCrates
 */
 
 .pc h4 {
@@ -43,7 +72,7 @@ p {
 }
 
 /**
-    PiggyCustomEnchants - PiggyCustomEnchants/index.html
+    PiggyCustomEnchants
 */
 
 .pce h3 {
@@ -55,7 +84,7 @@ p {
 }
 
 /**
-    PiggyCustomEnchantsShop - PiggyCustomEnchantsShop/index.html
+    PiggyCustomEnchantsShop
 */
 
 .pces h3 {
@@ -66,8 +95,12 @@ p {
     margin-top: 16px;
 }
 
+/***
+    PiggySpleef
+ */
+
 /**
-    PiggyTutorials - PiggyTutorials/index.html
+    PiggyTutorials
  */
 
 .pt h4 {
@@ -75,7 +108,7 @@ p {
 }
 
 /***
-    Contact - Contact/index.html
+    Contact
  */
 
 .contact form {
