@@ -54,22 +54,28 @@
     <script src="https://cdn.rawgit.com/MohammadYounes/AlertifyJS/006aa372/build/alertify.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
     <script src="/js/contact.js"></script>
-    <h1>Contact Us</h1>
-    <p>You can contact us below. Your message will be redirected to DaPigGuy & Aericio. Please try to provide contact
-        information (preferably Discord) if possible.</p>
-    <form onsubmit="sendMessage(); return false;" autocomplete="off">
-        <div class="form-group">
-            <label for="usernameInput">Username:</label>
-            <input id="usernameInput" class="form-control" title="Username" placeholder="Username" maxlength="12">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-auto">
+                <h1>Contact Us</h1>
+                <p>You can contact us below. Your message will be redirected to DaPigGuy & Aericio. Please try to
+                    provide contact information (preferably Discord) if possible.</p>
+                <form onsubmit="sendMessage(); return false;" autocomplete="off">
+                    <div class="form-group">
+                        <label for="usernameInput">Username:</label>
+                        <input id="usernameInput" class="form-control" title="Username" placeholder="Username" maxlength="12">
+                    </div>
+                    <div class="form-group">
+                        <label for="messageInput">Message:</label>
+                        <input id="messageInput" class="form-control" title="Message" placeholder="Message" maxlength="512">
+                    </div>
+                    <div>
+                        <input type="submit" value="Send Message">
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="messageInput">Message:</label>
-            <input id="messageInput" class="form-control" title="Message" placeholder="Message" maxlength="512">
-        </div>
-        <div>
-            <input type="submit" value="Send Message">
-        </div>
-    </form>
+    </div>
 </main>
 </body>
 </html>
