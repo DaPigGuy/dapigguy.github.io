@@ -99,7 +99,9 @@
               enchantment2: (another enchantment)
                 level: 1 (level of enchantment)
             lore: Example Lore (adds a description to the item; you can use \n for a new line)
-            command: tell %player% You opened the Common Crate! (command run when item drops; available variable: %PLAYER%)
+            command: (You can use %PLAYER% if you want to add the name of the player.)
+                - tell %PLAYER% You opened the Common Crate!
+                - say %PLAYER% opened the Common Crate!
         amount: 1 (amount of drops that can be received from opening crate)
         particle: lava (particle spawned during each drop)
         delay: 0.25 (delay between each drop)
