@@ -19,11 +19,6 @@ $RECYCLE.BIN/
 
 # JetBrains IDE
 \.idea/
-*.iml
-
-# Floobits
-\.floo
-\.flooignore
 
 # =========================
 # Operating System Files
