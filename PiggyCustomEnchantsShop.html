@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>PiggyDocs</title>
+    <meta property="og:image" content="../assets/img/icons/PiggyDocs256.jpg">
+    <meta property="og:title" content="PiggyDocs">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="PiggyDocs is a site documenting the configuration, usage, and API of DaPigGuy's plugins.">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="assets/img/icons/PiggyDocs16.jpg">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="assets/img/icons/PiggyDocs32.jpg">
+    <link rel="icon" type="image/jpeg" sizes="180x180" href="assets/img/icons/PiggyDocs180.jpg">
+    <link rel="icon" type="image/jpeg" sizes="192x192" href="assets/img/icons/PiggyDocs192.jpg">
+    <link rel="icon" type="image/jpeg" sizes="512x512" href="assets/img/icons/PiggyDocs512.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+        <div class="container-fluid"><a class="navbar-brand" href="index.html">PiggyDocs</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyBackpacks.html">PiggyBackpacks</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCustomEnchants.html">PiggyCustomEnchants</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCustomEnchantsShop.html">PiggyCustomEnchantsShop</a></li>
+                    <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Archive&nbsp;</a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="archive/PiggyCrates.html">PiggyCrates</a><a class="dropdown-item" role="presentation" href="archive/PiggyShopUI.html">PiggyShopUI</a><a class="dropdown-item" role="presentation"
+                                href="archive/PiggyTutorials.html">PiggyTutorials<br></a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mg-top-16px">
+        <div class="row">
+            <div class="col">
+                <h1>PiggyCustomEnchantsShop<a class="notd" href="https://github.com/DaPigGuy/PiggyCustomEnchantsShop/" target="_blank">
+    <i class="fa fa-github fa-md ico-hover"></i>
+</a><a class="notd" href="javascript:void(0)" onclick="getLatestDownload('PiggyCustomEnchantsShop'); return false;">
+    <i class="fa fa-download fa-md ico-hover"></i>
+</a></h1>
+                <p>PiggyCustomEnchantShop's documentation page includes the configuration documentation.<br></p>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h3>Information</h3>
+                        <p>PiggyCustomEnchantsShop is an addon for PiggyCustomEnchants, which adds an enchant shop utilizing signs and forms to purchase enchantment.<br></p>
+                    </li>
+                    <li class="list-group-item"><div id="ac-conf" role="tablist">
+    <div class="card">
+        <div class="card-header" role="tab">
+            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-conf .item-1" href="#ac-conf .item-1">Configuration</a></h5>
+        </div>
+        <div class="collapse hide item-1" role="tabpanel" data-parent="#ac-conf">
+            <div class="card-body">
+                <h4>Default Configuration</h4>
+                <script src="https://gist.github.com/Aericio/ca8296472765edf94297fcdad8d621cd.js"></script>
+                <h4>Explanation</h4>
+                <div class="table-responsive table-bordered table-hover">
+                    <table class="table">
+                        <thead>
+                            <tr class="thead-light">
+                                <th>Index</th>
+                                <th>Explanation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>shop-type</td>
+                                <td>Choose whether to use sign shop, or UI shop (forms).<br/><br/>
+                                    Accepted values: <code>sign, ui</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>double-tap</td>
+                                <td>Choose whether or not to require double clicking to confirm purchase (sign shop only).<br/><br/>
+                                    Accepted values: <code>true, false</code>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                        <div role="tablist" id="ac-ss">
+                            <div class="card">
+                                <div class="card-header" role="tab">
+                                    <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-ss .item-1" href="#ac-ss .item-1">Shop Setup</a></h5>
+                                </div>
+                                <div class="collapse item-1" role="tabpanel" data-parent="#ac-ss">
+                                    <div class="card-body">
+                                        <h4>Setting up a Sign Shop</h4><ul>
+    <li>Make sure you have <code>shop-type</code> set to <code>sign</code> in config.yml.<br/></li>
+    <li>Place a sign and replace as necessary:<br/>
+        <img src="assets/img/piggycustomenchants/pces-ss_visualized.png"/>
+    </li>
+</ul>
+                                        <h4 class="mg-top-16px">Setting up a Forms Shop (UI)</h4><ul>
+    <li>Make sure you have <code>shop-type</code> set to <code>ui</code> in config.yml.<br/></li>
+    <li>Use the command <code>/ceshop add &lt;enchant&gt; &lt;level&gt; &lt;price&gt;.</code><br/></li>
+</ul></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <p style="font-size: 8px;">Last Updated: October 11, 2019</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
