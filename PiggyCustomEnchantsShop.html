@@ -54,9 +54,9 @@
                     <li class="list-group-item"><div id="ac-conf" role="tablist">
     <div class="card">
         <div class="card-header" role="tab">
-            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-conf .item-1" href="#ac-conf .item-1">Configuration</a></h5>
+            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-conf .item" href="#ac-conf .item">Configuration</a></h5>
         </div>
-        <div class="collapse hide item-1" role="tabpanel" data-parent="#ac-conf">
+        <div class="collapse hide item" role="tabpanel" data-parent="#ac-conf">
             <div class="card-body">
                 <h4>Default Configuration</h4>
                 <script src="https://gist.github.com/Aericio/ca8296472765edf94297fcdad8d621cd.js"></script>
@@ -88,28 +88,27 @@
             </div>
         </div>
     </div>
-</div>
-                        <div role="tablist" id="ac-ss">
-                            <div class="card">
-                                <div class="card-header" role="tab">
-                                    <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-ss .item-1" href="#ac-ss .item-1">Shop Setup</a></h5>
-                                </div>
-                                <div class="collapse item-1" role="tabpanel" data-parent="#ac-ss">
-                                    <div class="card-body">
-                                        <h4>Setting up a Sign Shop</h4><ul>
-    <li>Make sure you have <code>shop-type</code> set to <code>sign</code> in config.yml.<br/></li>
-    <li>Place a sign and replace as necessary:<br/>
-        <img src="assets/img/piggycustomenchants/pces-ss_visualized.png"/>
-    </li>
-</ul>
-                                        <h4 class="mg-top-16px">Setting up a Forms Shop (UI)</h4><ul>
-    <li>Make sure you have <code>shop-type</code> set to <code>ui</code> in config.yml.<br/></li>
-    <li>Use the command <code>/ceshop add &lt;enchant&gt; &lt;level&gt; &lt;price&gt;.</code><br/></li>
-</ul></div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+</div><div role="tablist" id="ac-ss">
+    <div class="card">
+        <div role="tab" class="card-header">
+            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-ss .item" href="#ac-ss .item">Shop Setup</a></h5>
+        </div>
+        <div role="tabpanel" data-parent="#ac-ss" class="collapse item">
+            <div class="card-body">
+                <h4>Setting up a Sign Shop</h4>
+                <ul>
+                    <li>Make sure you have <code>shop-type</code> set to <code>sign</code> in config.yml.<br /></li>
+                    <li>Place a sign and replace as necessary:<br /><img src="blob:https://bootstrapstudio.io/728344a6-6109-4120-b660-901442d56990" /></li>
+                </ul>
+                <h4 class="mg-top-16px">Setting up a Forms Shop (UI)</h4>
+                <ul>
+                    <li>Make sure you have <code>shop-type</code> set to <code>ui</code> in config.yml.<br /></li>
+                    <li>Use the command <code>/ceshop add &lt;enchant&gt; &lt;level&gt; &lt;price&gt;.</code><br /></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div></li>
                 </ul>
             </div>
         </div>
