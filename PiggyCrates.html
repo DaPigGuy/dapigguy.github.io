@@ -40,16 +40,16 @@
     <div class="container mg-top-16px">
         <div class="row">
             <div class="col">
-                <h1>PiggyCustomEnchantsShop<a class="notd" href="https://github.com/DaPigGuy/PiggyCustomEnchantsShop/" target="_blank">
+                <h1>PiggyCrates<a class="notd" href="https://github.com/DaPigGuy/PiggyCrates/" target="_blank">
     <i class="fa fa-github fa-md ico-hover"></i>
-</a><a class="notd" href="javascript:void(0)" onclick="getLatestDownload('PiggyCustomEnchantsShop'); return false;">
+</a><a class="notd" href="javascript:void(0)" onclick="getLatestDownload('PiggyCrates'); return false;">
     <i class="fa fa-download fa-md ico-hover"></i>
 </a></h1>
-                <p>PiggyCustomEnchantShop's documentation page includes the configuration documentation.<br></p>
+                <p>PiggyCrates's documentation page includes the configuration documentation.<br></p>
                 <ul class="list-group">
                     <li class="list-group-item">
                         <h3>Information</h3>
-                        <p>PiggyCustomEnchantsShop is an addon for PiggyCustomEnchants, which adds an enchant shop utilizing signs and forms to purchase enchantment.<br></p>
+                        <p>PiggyCrates is a simple and customizable crates plugin, supporting both custom and vanilla enchantments.<br></p>
                     </li>
                     <li class="list-group-item"><div id="ac-conf" role="tablist">
     <div class="card">
@@ -59,7 +59,7 @@
         <div class="collapse hide item" role="tabpanel" data-parent="#ac-conf">
             <div class="card-body">
                 <h4>Default Configuration</h4>
-                <script src="https://gist.github.com/Aericio/ca8296472765edf94297fcdad8d621cd.js"></script>
+                <script src="https://gist.github.com/Aericio/e74a92e37923e7fc1f03f197a2ee974f.js"></script>
                 <h4>Explanation</h4>
                 <div class="table-responsive table-bordered table-hover">
                     <table class="table">
@@ -71,15 +71,15 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>shop-type</td>
-                                <td>Choose whether to use sign shop, or UI shop (forms).<br/><br/>
-                                    Accepted values: <code>sign, ui</code>
+                                <td>tutorial.messages</td>
+                                <td>Specify what messages should be sent in the tutorial (no limit).<br/><br/>
+                                    Accepted values: <code>array</code>
                                 </td>
                             </tr>
                             <tr>
-                                <td>double-tap</td>
-                                <td>Choose whether or not to require double clicking to confirm purchase (sign shop only).<br/><br/>
-                                    Accepted values: <code>true, false</code>
+                                <td>tutorial.delay</td>
+                                <td>Specify how long, in seconds, should the plugin wait before the next message is sent.<br/><br/>
+                                    Accepted values: <code>integer</code>
                                 </td>
                             </tr>
                         </tbody>
@@ -88,27 +88,32 @@
             </div>
         </div>
     </div>
-</div><div role="tablist" id="ac-ss">
-    <div class="card">
-        <div role="tab" class="card-header">
-            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-ss .item" href="#ac-ss .item">Shop Setup</a></h5>
-        </div>
-        <div role="tabpanel" data-parent="#ac-ss" class="collapse item">
-            <div class="card-body">
-                <h4>Setting up a Sign Shop</h4>
-                <ul>
-                    <li>Make sure you have <code>shop-type</code> set to <code>sign</code> in config.yml.<br /></li>
-                    <li>Place a sign and replace as necessary:<br /><img src="blob:https://bootstrapstudio.io/728344a6-6109-4120-b660-901442d56990" /></li>
-                </ul>
-                <h4 class="mg-top-16px">Setting up a Forms Shop (UI)</h4>
-                <ul>
-                    <li>Make sure you have <code>shop-type</code> set to <code>ui</code> in config.yml.<br /></li>
-                    <li>Use the command <code>/ceshop add &lt;enchant&gt; &lt;level&gt; &lt;price&gt;.</code><br /></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div></li>
+</div>
+                        <div role="tablist" id="ac-crconf">
+                            <div class="card">
+                                <div class="card-header" role="tab">
+                                    <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-crconf .item-1" href="#ac-crconf .item-1">Crates Configuration</a></h5>
+                                </div>
+                                <div class="collapse item-1" role="tabpanel" data-parent="#ac-crconf">
+                                    <div class="card-body">
+                                        <p class="card-text">Nothing to see here yet...&nbsp;👀(rewrite pending)<br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div role="tablist" id="ac-exconf">
+                            <div class="card">
+                                <div class="card-header" role="tab">
+                                    <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-exconf .item-1" href="#ac-exconf .item-1">Example Configurations</a></h5>
+                                </div>
+                                <div class="collapse item-1" role="tabpanel" data-parent="#ac-exconf">
+                                    <div class="card-body">
+                                        <p class="card-text">Nothing to see here yet...&nbsp;👀(rewrite pending)<br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
