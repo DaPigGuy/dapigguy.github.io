@@ -57,18 +57,22 @@
         </div>
         <div role="tabpanel" data-parent="#ac-v2" class="collapse hide item">
             <div class="card-body">
-                <p class="card-text">Version 2.0.0 is a complete rewrite of the plugin and introduces tons of bug fixes, optimizations, and quality of life changes.<br />All custom enchantments in Version 1.4.6 have also been ported to Version 2.0.0.<br /></p>
+                <p class="card-text">Version 2.0.0 is a complete rewrite of the plugin and introduces tons of bug fixes, optimizations, and quality of life changes.<br/>All custom enchantments in Version 1.4.6 have also been ported to Version 2.0.0.</p>
                 <ul>
                     <li>Enabling/disabling enchantments in certain worlds/globally is now built into the plugin. (<a href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/94">#94</a>)</li>
+                    <li>Added a remote enchant disabler for emergency situations (disable affects all servers).</li>
                     <li>Custom enchantments that are disabled will not have their tasks enabled.</li>
-                    <li>Explosive enchants now have a toggle to allow world damage or not.</li>
+                    <li>Execution chances of enchantments are now configurable.</li>
                     <li>Custom enchantments are now registered into PocketMine-MP.</li>
-                    <li>Added a remote-enchant disabler for emergency situations (disable affects all servers).</li>
-                    <li>&quot;Maximum -5 is less than the minimum 0&quot; issue has been fixed. (<a href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/211">#211</a>)<br /></li>
+                    <li>Now using Commando virion for command handling.</li>
+                    <li>The form version of /ce has been improved upon.</li>
+                    <li>Explosive enchants now have a toggle for world damage.</li>
+                    <li>Added checks for applying books. (<a href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/209">#209</a>)</li>
+                    <li>Parachute now uses negative Levitation effect to simulate slow falling.</li>
+                    <li>Fixed issue where throwing a projectile and switching to a different weapon would trigger the custom enchants of that weapon. (<a href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/157">#157</a>)</li>
                     <li>Fixed &quot;WitherSkull Enchant does not apply Wither Effect.&quot; (<a href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/182">#182</a>)</li>
-                    <li>Fixed issue where throwing a projectile and switching to CE weapon would apply the effects of the CE weapon to the player. (<a href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/157">#157</a>)</li>
                     <li>Fixed pigs/wither skulls remaining. (<a href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/189">#189</a>)</li>
-                    <li>And... introduced new undiscovered bugs.</li>
+                    <li>&quot;Maximum -5 is less than the minimum 0&quot; issue has been fixed. (<a href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/211">#211</a>)</li>
                 </ul>
             </div>
         </div>
@@ -269,6 +273,7 @@
         </div>
         <div class="collapse hide item" role="tabpanel" data-parent="#ac-ce">
             <div class="card-body">
+                <p>Any custom enchants that you want to be added? Submit your ideas <a href="https://docs.google.com/forms/d/e/1FAIpQLScfWdk8OyQ6NNw6KiJxP_4CH4GHnKlaFr4VfZIQojk7OPlyoQ/viewform">here<a/>!</p>
                 <div class="table-responsive table-bordered table-hover text-nowrap table-fixed-width">
                     <table class="table">
                         <thead>
@@ -596,6 +601,11 @@
                             </tr>
                             <tr>
                                 <td></td>
+                                <td>Homing</td>
+                                <td>Arrow will home in on the nearest entity.</td>
+                            </tr>
+                            <tr>
+                                <td></td>
                                 <td>Missile</td>
                                 <td>Spawns TNT where arrow lands.</td>
                             </tr>
@@ -720,12 +730,66 @@
             </div>
         </div>
     </div>
+</div><div id="ac-ice" role="tablist">
+    <div class="card">
+        <div class="card-header" role="tab">
+            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-ice .item" href="#ac-ice .item">Incompatible Custom Enchants</a></h5>
+        </div>
+        <div class="collapse hide item" role="tabpanel" data-parent="#ac-ice">
+            <div class="card-body">
+                <div class="table-responsive table-bordered table-hover text-nowrap table-fixed-width">
+                    <table class="table">
+                        <thead>
+                            <tr class="thead-light">
+                                <th>Enchantment</th>
+                                <th>Incompatible Enchants</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Blaze</td>
+                                <td>Porkified</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Wither Skull</td>
+                            </tr>
+                            <tr>
+                                <td>Grappling</td>
+                                <td>Volley</td>
+                            </tr>
+                            <tr>
+                                <td>Grow</td>
+                                <td>Shrink</td>
+                            </tr>
+                            <tr>
+                                <td>Homing</td>
+                                <td>Blaze</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Porkified</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Wither Skull</td>
+                            </tr>
+                            <tr>
+                                <td>Porkified</td>
+                                <td>Wither Skull</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div></li>
                 </ul>
             </div>
         </div>
         <footer>
-            <p style="font-size: 8px;">Last Updated: October 19, 2019</p>
+            <p style="font-size: 8px;">Last Updated: November 7, 2019</p>
         </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
