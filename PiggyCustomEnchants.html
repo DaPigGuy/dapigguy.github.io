@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>PiggyDocs</title>
-    <meta name="description" content="PiggyDocs is a site documenting the configuration, usage, and API of DaPigGuy's plugins.">
-    <meta property="og:description" content="PiggyDocs is a site documenting the configuration, usage, and API of DaPigGuy's plugins.">
+    <meta name="description"
+          content="PiggyDocs is a site documenting the configuration, usage, and API of DaPigGuy's plugins.">
+    <meta property="og:description"
+          content="PiggyDocs is a site documenting the configuration, usage, and API of DaPigGuy's plugins.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="PiggyDocs">
     <meta property="og:image" content="../assets/img/icons/PiggyDocs256.jpg">
@@ -21,780 +23,876 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
-        <div class="container-fluid"><a class="navbar-brand" href="index.html">PiggyDocs</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse"
-                id="navcol-1">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyBackpacks.html">PiggyBackpacks</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCrates.html">PiggyCrates</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCustomEnchants.html">PiggyCustomEnchants</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCustomEnchantsShop.html">PiggyCustomEnchantsShop</a></li>
-                    <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Archive&nbsp;</a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="archive/PiggyShopUI.html">PiggyShopUI<br></a><a class="dropdown-item" role="presentation" href="archive/PiggyTutorials.html">PiggyTutorials<br></a><a class="dropdown-item" role="presentation"><br></a></div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container mg-top-16px">
-        <div class="row">
-            <div class="col">
-                <h1>PiggyCustomEnchants<a class="notd" href="https://github.com/DaPigGuy/PiggyCustomEnchants/" target="_blank">
-    <i class="fa fa-github fa-md ico-hover"></i>
-</a><a class="notd" href="javascript:void(0)" onclick="getLatestDownload('PiggyCustomEnchants'); return false;">
-    <i class="fa fa-download fa-md ico-hover"></i>
-</a></h1>
-                <p>PiggyCustomEnchant's documentation page includes the configuration and API documentation.<br></p>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <h3>Information</h3>
-                        <p>PiggyCustomEnchants is PocketMine-MP's first public custom enchantments plugin created in&nbsp;April 29, 2017 by MCPEPIG (DaPigGuy).<br>If you require additional support with our plugin, then feel free to join our&nbsp;<a href="https://discordapp.com/invite/qmnDsSD">discord server</a>.<br><br>As
-                            of October 11, 2019, PiggyCustomEnchants has been completely rewritten from scratch. Click the box below to learn more.<br></p><div role="tablist" id="ac-v2">
-    <div class="card">
-        <div role="tab" class="card-header">
-            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-v2 .item" href="#ac-v2 .item">Version 2.0.0 - changes</a></h5>
-        </div>
-        <div role="tabpanel" data-parent="#ac-v2" class="collapse hide item">
-            <div class="card-body">
-                <p class="card-text">Version 2.0.0 is a complete rewrite of the plugin and introduces tons of bug fixes, optimizations, and quality of life changes.<br/>All custom enchantments in Version 1.4.6 have also been ported to Version 2.0.0.</p>
-                <ul>
-                    <li>Enabling/disabling enchantments in certain worlds/globally is now built into the plugin. (<a href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/94">#94</a>)</li>
-                    <li>Added a remote enchant disabler for emergency situations (disable affects all servers).</li>
-                    <li>Custom enchantments that are disabled will not have their tasks enabled.</li>
-                    <li>Execution chances of enchantments are now configurable.</li>
-                    <li>Custom enchantments are now registered into PocketMine-MP.</li>
-                    <li>Now using Commando virion for command handling.</li>
-                    <li>The form version of /ce has been improved upon.</li>
-                    <li>Explosive enchants now have a toggle for world damage.</li>
-                    <li>Added checks for applying books. (<a href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/209">#209</a>)</li>
-                    <li>Parachute now uses negative Levitation effect to simulate slow falling.</li>
-                    <li>Fixed issue where throwing a projectile and switching to a different weapon would trigger the custom enchants of that weapon. (<a href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/157">#157</a>)</li>
-                    <li>Fixed &quot;WitherSkull Enchant does not apply Wither Effect.&quot; (<a href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/182">#182</a>)</li>
-                    <li>Fixed pigs/wither skulls remaining. (<a href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/189">#189</a>)</li>
-                    <li>&quot;Maximum -5 is less than the minimum 0&quot; issue has been fixed. (<a href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/211">#211</a>)</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div></li>
-                    <li class="list-group-item"><div id="ac-conf" role="tablist">
-    <div class="card">
-        <div class="card-header" role="tab">
-            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-conf .item" href="#ac-conf .item">Configuration</a></h5>
-        </div>
-        <div class="collapse hide item" role="tabpanel" data-parent="#ac-conf">
-            <div class="card-body">
-                <h4>Default Configuration</h4>
-                <script src="https://gist.github.com/Aericio/3b5c988e8766d70c7c710092c5937d34.js"></script>
-                <h4>Explanation</h4>
-                <div class="table-responsive table-bordered table-hover">
-                    <table class="table">
-                        <thead>
-                            <tr class="thead-light">
-                                <th>Key</th>
-                                <th>Index</th>
-                                <th>Explanation</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>rarity-colors</td>
-                                <td>common, uncommon, rare, mythic</td>
-                                <td>Any of the following color values are accepted for any index: <br/><br/>
-                                    Accepted values: <code>black, dark_blue, dark_green, dark_aqua, dark_red, dark_purple, gold, gray, dark_gray, blue, green, aqua, red, light_purple, yellow, white</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>enchants</td>
-                                <td>position</td>
-                                <td>Choose whether to show enchants in name or lore of the item.<br/><br/>
-                                    Accepted values: <code>name, lore</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>roman-numerals</td>
-                                <td>If set to <code>true</code>, then the plugin will show enchantments in roman numerals. Otherwise, it will show as normal numbers.<br/><br/>
-                                    Accepted values: <code>true, false</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>forms</td>
-                                <td>enabled</td>
-                                <td>If set to <code>true</code> then the plugin will use forms instead of chat. Otherwise, it will use chat instead.<br/><br/>
-                                    Accepted values: <code>true, false</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>disabled-enchantments</td>
-                                <td>[]</td>
-                                <td>List enchantments that you want to be disabled globally in here.<br/>
-                                    Example: <code>[&quot;Porkified&quot;, &quot;Gears&quot;]</code><br/><br/>
-                                    Accepted values: <code>enchantment names, enchantment ids</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>per-world-disabled-enchants</td>
-                                <td>worldName</td>
-                                <td>List enchantments that you want to be disabled per-world here.<br/>
-                                    Example: <code>NoJetpacks: [&quot;jetpack&quot;]</code><br/><br/>
-                                    Accepted values: <code>world name, enchantment names, enchantment ids</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>world-damage</td>
-                                <td>blaze, bombardment, explosive, lightning, missile</td>
-                                <td>If set to true, then the enchantments will deal damage to the world. Otherwise, the enchantments will not.<br/><br/>
-                                    Accepted values: <code>true, false</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>chicken</td>
-                                <td>drops</td>
-                                <td>List drops that the Chicken enchant should have a chance at dropping (all equal %)<br/>
-                                    Example: <code>[&quot;266:0:1&quot;, &quot;id:meta:count&quot;]</code><br/><br/>
-                                    Accepted values: <code>item id, item meta, amount
-                                    of items</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>miscellaneous</td>
-                                <td>armor-hold-equip</td>
-                                <td>Enables PiggyCE's implementation of click/hold armor to equip from hotbar, which is not implemented in pmmp.<br/><br/>
-                                    Accepted values: <code>true, false</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>chances</td>
-                                <td>[enchants]</td>
-                                <td>Set the chance to activate REACTIVE-type enchantments. Reaction chances are defined as <code>multiplier ∗ enchantment level</code>.<br/><br/>
-                                    Accepted values: <code>lowercase enchantment names, chance multiplier</code>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div><div id="ac-api" role="tablist">
-    <div class="card">
-        <div class="card-header" role="tab">
-            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-api .item" href="#ac-api .item">API Documentation</a></h5>
-        </div>
-        <div class="collapse hide item" role="tabpanel" data-parent="#ac-api">
-            <div class="card-body">
-                <div id="add-remove-enchant">
-                    <h4>Adding/removing a custom enchantment.</h4>
-                    <p>As of v2.0.0, you can add/remove enchantments directly from PocketMine-MP&#39;s enchantment functions instead of our own.</p>
-                    <div class="table-responsive table-bordered table-hover text-nowrap table-fixed-width">
-                        <table class="table">
-                            <thead>
-                                <tr class="thead-light">
-                                    <th>Function</th>
-                                    <th>Parameters</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>$item-&gt;addEnchantment(new EnchantmentInstance($enchantment, $level));</code></td>
-                                    <td>$enchantment = ID of custom enchant to add<br/>
-                                        $level = level of enchant to add</td>
-                                </tr>
-                                <tr>
-                                    <td><code>$item-&gt;removeEnchantment($enchantment);</code></td>
-                                    <td>$enchantment = ID of custom enchant to remove</td>
-                                </tr>
-                            </tbody>
-                        </table>
+<nav class="navbar navbar-light navbar-expand-md navigation-clean">
+    <div class="container-fluid"><a class="navbar-brand" href="index.html">PiggyDocs</a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse"
+             id="navcol-1">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item" role="presentation"><a class="nav-link"
+                                                            href="PiggyBackpacks.html">PiggyBackpacks</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCrates.html">PiggyCrates</a>
+                </li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCustomEnchants.html">PiggyCustomEnchants</a>
+                </li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCustomEnchantsShop.html">PiggyCustomEnchantsShop</a>
+                </li>
+                <li class="dropdown nav-item">
+                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Archive&nbsp;</a>
+                    <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" role="presentation" href="archive/PiggyShopUI.html">PiggyShopUI<br></a>
+                        <a class="dropdown-item" role="presentation"
+                           href="archive/PiggyTutorials.html">PiggyTutorials<br></a>
                     </div>
-                </div>
-                <div id="get-enchant">
-                    <h4 class="mg-top-16px">Getting custom enchantments by name/ID</h4>
-                    <p></p>
-                    <div class="table-responsive table-bordered table-hover text-nowrap table-fixed-width">
-                        <table class="table">
-                            <thead>
-                                <tr class="thead-light">
-                                    <th>Function</th>
-                                    <th>Parameters</th>
-                                    <th>Returns</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>CustomEnchantManager::getEnchantment(int $id);</code></td>
-                                    <td>$id = ID of the custom enchant</td>
-                                    <td>CustomEnchant if successful, else null.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>CustomEnchantManager::getEnchantmentByName(string $name);</code></td>
-                                    <td>$name = name of custom enchant</td>
-                                    <td>CustomEnchant if successful, else null.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container mg-top-16px">
+    <div class="row">
+        <div class="col">
+            <h1>PiggyCustomEnchants<a class="notd" href="https://github.com/DaPigGuy/PiggyCustomEnchants/"
+                                      target="_blank">
+                <i class="fa fa-github fa-md ico-hover"></i>
+            </a><a class="notd" href="javascript:void(0)"
+                   onclick="getLatestDownload('PiggyCustomEnchants'); return false;">
+                <i class="fa fa-download fa-md ico-hover"></i>
+            </a></h1>
+            <p>PiggyCustomEnchant's documentation page includes the configuration and API documentation.<br></p>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h3>Information</h3>
+                    <p>PiggyCustomEnchants is PocketMine-MP's first public custom enchantments plugin created in&nbsp;April
+                        29, 2017 by MCPEPIG (DaPigGuy).<br>If you require additional support with our plugin, then feel
+                        free to join our&nbsp;<a href="https://discordapp.com/invite/qmnDsSD">discord
+                            server</a>.<br><br>As
+                        of October 11, 2019, PiggyCustomEnchants has been completely rewritten from scratch. Click the
+                        box below to learn more.<br></p>
+                    <div role="tablist" id="ac-v2">
+                        <div class="card">
+                            <div role="tab" class="card-header">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" aria-expanded="false" aria-controls="ac-v2 .item"
+                                       href="#ac-v2 .item">Version 2.0.0 - changes</a>
+                                </h5>
+                            </div>
+                            <div role="tabpanel" data-parent="#ac-v2" class="collapse hide item">
+                                <div class="card-body">
+                                    <p class="card-text">Version 2.0.0 is a complete rewrite of the plugin and
+                                        introduces tons of bug fixes, optimizations, and quality of life changes.<br/>All
+                                        custom enchantments in Version 1.4.6 have also been ported to Version 2.0.0.</p>
+                                    <ul>
+                                        <li>Enabling/disabling enchantments in certain worlds/globally is now built into
+                                            the plugin. (<a
+                                                    href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/94">#94</a>)
+                                        </li>
+                                        <li>Added a remote enchant disabler for emergency situations (disable affects
+                                            all servers).
+                                        </li>
+                                        <li>Custom enchantments that are disabled will not have their tasks enabled.
+                                        </li>
+                                        <li>Execution chances of enchantments are now configurable.</li>
+                                        <li>Custom enchantments are now registered into PocketMine-MP.</li>
+                                        <li>Now using Commando virion for command handling.</li>
+                                        <li>The form version of /ce has been improved upon.</li>
+                                        <li>Explosive enchants now have a toggle for world damage.</li>
+                                        <li>Added checks for applying books. (<a
+                                                href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/209">#209</a>)
+                                        </li>
+                                        <li>Parachute now uses negative Levitation effect to simulate slow falling.</li>
+                                        <li>Fixed issue where throwing a projectile and switching to a different weapon
+                                            would trigger the custom enchants of that weapon. (<a
+                                                    href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/157">#157</a>)
+                                        </li>
+                                        <li>Fixed &quot;WitherSkull Enchant does not apply Wither Effect.&quot; (<a
+                                                href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/182">#182</a>)
+                                        </li>
+                                        <li>Fixed pigs/wither skulls remaining. (<a
+                                                href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/189">#189</a>)
+                                        </li>
+                                        <li>&quot;Maximum -5 is less than the minimum 0&quot; issue has been fixed. (<a
+                                                href="https://github.com/DaPigGuy/PiggyCustomEnchants/issues/211">#211</a>)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div id="reg-unreg-enchant">
-                    <h4 class="mg-top-16px">Registering/unregistering a custom enchantment</h4>
-                    <p>As of v2.0.0, unregistering enchants will also automatically cease task-related activities for those enchants.</p>
-                    <div class="table-responsive table-bordered table-hover text-nowrap table-fixed-width">
-                        <table class="table">
-                            <thead>
-                                <tr class="thead-light">
-                                    <th>Function</th>
-                                    <th>Parameters</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>CustomEnchantManager::registerEnchantment(new CustomEnchant(Plugin $plugin, int $id, int $rarity = self::RARITY_RARE));</code></td>
-                                    <td>$plugin = your plugin main<br/>
-                                        $id = ID of custom enchant<br/>
-                                        $rarity = rarity of enchant</td>
-                                </tr>
-                                <tr>
-                                    <td><code>CustomEnchantManager::unregisterEnchantment(int $id);</code></td>
-                                    <td>$id = ID of custom enchant</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                </li>
+                <li class="list-group-item">
+                    <div id="ac-conf" role="tablist">
+                        <div class="card">
+                            <div class="card-header" role="tab">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" aria-expanded="false" aria-controls="ac-conf .item"
+                                       href="#ac-conf .item">Configuration</a>
+                                </h5>
+                            </div>
+                            <div class="collapse hide item" role="tabpanel" data-parent="#ac-conf">
+                                <div class="card-body">
+                                    <h4>Default Configuration</h4>
+                                    <script src="https://gist.github.com/Aericio/3b5c988e8766d70c7c710092c5937d34.js"></script>
+                                    <h4>Explanation</h4>
+                                    <div class="table-responsive table-bordered table-hover">
+                                        <table class="table">
+                                            <thead>
+                                            <tr class="thead-light">
+                                                <th>Key</th>
+                                                <th>Index</th>
+                                                <th>Explanation</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>rarity-colors</td>
+                                                <td>common, uncommon, rare, mythic</td>
+                                                <td>Any of the following color values are accepted for any index:
+                                                    <br/><br/>
+                                                    Accepted values: <code>black, dark_blue, dark_green, dark_aqua,
+                                                        dark_red, dark_purple, gold, gray, dark_gray, blue, green, aqua,
+                                                        red, light_purple, yellow, white</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>enchants</td>
+                                                <td>position</td>
+                                                <td>Choose whether to show enchants in name or lore of the
+                                                    item.<br/><br/>
+                                                    Accepted values: <code>name, lore</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>roman-numerals</td>
+                                                <td>If set to <code>true</code>, then the plugin will show enchantments
+                                                    in roman numerals. Otherwise, it will show as normal
+                                                    numbers.<br/><br/>
+                                                    Accepted values: <code>true, false</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>forms</td>
+                                                <td>enabled</td>
+                                                <td>If set to <code>true</code> then the plugin will use forms instead
+                                                    of chat. Otherwise, it will use chat instead.<br/><br/>
+                                                    Accepted values: <code>true, false</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>disabled-enchantments</td>
+                                                <td>[]</td>
+                                                <td>List enchantments that you want to be disabled globally in
+                                                    here.<br/>
+                                                    Example: <code>[&quot;Porkified&quot;,
+                                                        &quot;Gears&quot;]</code><br/><br/>
+                                                    Accepted values: <code>enchantment names, enchantment ids</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>per-world-disabled-enchants</td>
+                                                <td>worldName</td>
+                                                                               
+                                                <td>List enchantments that you want to be disabled per-world here.<br/>
+                                                    Example: <code>NoJetpacks: [&quot;jetpack&quot;]</code><br/><br/>
+                                                    Accepted values: <code>world name, enchantment names, enchantment
+                                                        ids</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>world-damage</td>
+                                                <td>blaze, bombardment, explosive, lightning, missile</td>
+                                                <td>If set to true, then the enchantments will deal damage to the world.
+                                                    Otherwise, the enchantments will not.<br/><br/>
+                                                    Accepted values: <code>true, false</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>chicken</td>
+                                                <td>drops</td>
+                                                <td>List drops that the Chicken enchant should have a chance at dropping
+                                                    (all equal %)<br/>
+                                                    Example: <code>[&quot;266:0:1&quot;,
+                                                        &quot;id:meta:count&quot;]</code><br/><br/>
+                                                    Accepted values: <code>item id, item meta, amount
+                                                        of items</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>miscellaneous</td>
+                                                <td>armor-hold-equip</td>
+                                                <td>Enables PiggyCE's implementation of click/hold armor to equip from
+                                                    hotbar, which is not implemented in pmmp.<br/><br/>
+                                                    Accepted values: <code>true, false</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>chances</td>
+                                                <td>[enchants]</td>
+                                                <td>Set the chance to activate REACTIVE-type enchantments. Reaction
+                                                    chances are defined as <code>multiplier ∗ enchantment
+                                                        level</code>.<br/><br/>
+                                                    Accepted values: <code>lowercase enchantment names, chance
+                                                        multiplier</code>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+                    <div id="ac-api" role="tablist">
+                        <div class="card">
+                            <div class="card-header" role="tab">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" aria-expanded="false" aria-controls="ac-api .item"
+                                       href="#ac-api .item">API Documentation</a>
+                                </h5>
+                            </div>
+                            <div class="collapse hide item" role="tabpanel" data-parent="#ac-api">
+                                <div class="card-body">
+                                    <div id="add-remove-enchant">
+                                        <h4>Adding/removing a custom enchantment.</h4>
+                                        <p>As of v2.0.0, you can add/remove enchantments directly from PocketMine-MP&#39;s
+                                            enchantment functions instead of our own.</p>
+                                        <div class="table-responsive table-bordered table-hover text-nowrap table-fixed-width">
+                                            <table class="table">
+                                                <thead>
+                                                <tr class="thead-light">
+                                                    <th>Function</th>
+                                                    <th>Parameters</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td><code>$item-&gt;addEnchantment(new
+                                                        EnchantmentInstance($enchantment, $level));</code></td>
+                                                    <td>$enchantment = ID of custom enchant to add<br/>
+                                                        $level = level of enchant to add
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>$item-&gt;removeEnchantment($enchantment);</code></td>
+                                                    <td>$enchantment = ID of custom enchant to remove</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="get-enchant">
+                                        <h4 class="mg-top-16px">Getting custom enchantments by name/ID</h4>
+                                        <p></p>
+                                        <div class="table-responsive table-bordered table-hover text-nowrap table-fixed-width">
+                                            <table class="table">
+                                                <thead>
+                                                <tr class="thead-light">
+                                                    <th>Function</th>
+                                                    <th>Parameters</th>
+                                                    <th>Returns</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td><code>CustomEnchantManager::getEnchantment(int $id);</code></td>
+                                                    <td>$id = ID of the custom enchant</td>
+                                                    <td>CustomEnchant if successful, else null.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>CustomEnchantManager::getEnchantmentByName(string
+                                                        $name);</code></td>
+                                                    <td>$name = name of custom enchant</td>
+                                                    <td>CustomEnchant if successful, else null.</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="reg-unreg-enchant">
+                                        <h4 class="mg-top-16px">Registering/unregistering a custom enchantment</h4>
+                                        <p>As of v2.0.0, unregistering enchants will also automatically cease
+                                            task-related activities for those enchants.</p>
+                                        <div class="table-responsive table-bordered table-hover text-nowrap table-fixed-width">
+                                            <table class="table">
+                                                <thead>
+                                                <tr class="thead-light">
+                                                    <th>Function</th>
+                                                    <th>Parameters</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td><code>CustomEnchantManager::registerEnchantment(new
+                                                        CustomEnchant(Plugin $plugin, int $id, int $rarity =
+                                                        self::RARITY_RARE));</code></td>
+                                                    <td>$plugin = your plugin main<br/>
+                                                        $id = ID of custom enchant<br/>
+                                                        $rarity = rarity of enchant
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><code>CustomEnchantManager::unregisterEnchantment(int
+                                                        $id);</code></td>
+                                                    <td>$id = ID of custom enchant</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ac-ce" role="tablist">
+                        <div class="card">
+                            <div class="card-header" role="tab">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" aria-expanded="false" aria-controls="ac-ce .item"
+                                       href="#ac-ce .item">Custom Enchants</a>
+                                </h5>
+                            </div>
+                            <div class="collapse hide item" role="tabpanel" data-parent="#ac-ce">
+                                <div class="card-body">
+                                    <p>Any custom enchants that you want to be added? Submit your ideas <a
+                                            href="https://docs.google.com/forms/d/e/1FAIpQLScfWdk8OyQ6NNw6KiJxP_4CH4GHnKlaFr4VfZIQojk7OPlyoQ/viewform">here</a>!
+                                    </p>
+                                    <div class="table-responsive table-bordered table-hover text-nowrap table-fixed-width">
+                                        <table class="table">
+                                            <thead>
+                                            <tr class="thead-light">
+                                                <th>Type</th>
+                                                <th>Enchantment</th>
+                                                <th>Description</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>Armor</td>
+                                                <td>Anti-Knockback</td>
+                                                <td>Reduces knockback per armor piece.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Armored</td>
+                                                <td>Sword-inflicted damage is reduced.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Berseker</td>
+                                                <td>Gain strength when low on health.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Cactus</td>
+                                                <td>Deal damage to nearby enemies.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Cloaking</td>
+                                                <td>Gain invisibility when hit.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Cursed</td>
+                                                <td>Inflicts Wither upon hitting enemy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Drunk</td>
+                                                <td>Inflicts Slowness, Mining Fatigue, and Nausea upon hitting enemy.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Endershift</td>
+                                                <td>Gain Speed and Absorption when low on health.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Enlighted</td>
+                                                <td>Gain Regeneration when hit.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Forcefield</td>
+                                                <td>Deflects projectiles and living entities in a radius dependent on
+                                                    enchantment level.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Frozen</td>
+                                                <td>Inflicts Slowness upon hitting enemy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Hardened</td>
+                                                <td>Inflicts Weakness upon hitting enemy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Heavy</td>
+                                                <td>Axe-inflicted damage is reduced.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Molten</td>
+                                                <td>Sets an enemy on fire when hit.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Obsidian Shield</td>
+                                                <td>Gain Fire Resistance while equipped.<br/></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Overload</td>
+                                                <td>Gives extra health (stackable).</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Poisoned</td>
+                                                <td>Inflicts Poison when hit by an enemy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Poisonous Cloud</td>
+                                                <td>Creates a cloud of poison around entity, giving poison to anyone who
+                                                    enters.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Revive</td>
+                                                <td>Gain another life, but removes a level from armor.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Revulsion</td>
+                                                <td>Inflicts Nausea for when hit by an enemy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Self Destruct</td>
+                                                <td>Spawns TNT when you die.<br/></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Shielded</td>
+                                                <td>Gives Resistance while worn (stackable).</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Tank</td>
+                                                <td>Decreases damage from bows.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Helmet</td>
+                                                <td>Antitoxin</td>
+                                                <td>Grants immunity to poison.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Focused</td>
+                                                <td>Negates or reduces the effects of nausea.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Glowing</td>
+                                                <td>Gain Night Vision while equipped.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Implants</td>
+                                                <td>Replenishes hunger and air when moving.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Meditation</td>
+                                                <td>Replenishes health and hunger every 20 seconds when not moving.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Chestplate</td>
+                                                <td>Chicken</td>
+                                                <td>Lay eggs every 5 minutes with a chance of rare drop.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Enraged</td>
+                                                <td>Gain Strength while equipped.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Parachute</td>
+                                                <td>Slows your descent above 3 blocks.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Prowl</td>
+                                                <td>Gain Invisibility and Slowness while sneaking.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Spider</td>
+                                                <td>Ability to climb walls.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Vacuum</td>
+                                                <td>Suck up nearby items.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Boots</td>
+                                                <td>Gears</td>
+                                                <td>Gain Speed while equipped.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Jetpack</td>
+                                                <td>Flies in the direction you are facing when you sneak.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Magma Walker</td>
+                                                <td>Temporarily turns lava into obsidian around you.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Springs</td>
+                                                <td>Gain a small jump boost.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Stomp</td>
+                                                <td>Deal damage to enemy when taking fall damage.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Weapon</td>
+                                                <td>Aerial</td>
+                                                <td>While in air, damage increases.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Backstab</td>
+                                                <td>Backstabbing enemies deals increased damage.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Blessed</td>
+                                                <td>Grants a chance to remove harmful effects during combat.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Blind</td>
+                                                <td>Inflicts Blindness upon hitting enemies.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Charge</td>
+                                                <td>Damage increases while sprinting.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Cripple</td>
+                                                <td>Inflicts Nausea and Slowness upon hitting enemy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Deathbringer</td>
+                                                <td>Increases damage inflicted.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Deep Wounds</td>
+                                                <td>Inflict on enemies deep wounds that cause bleeding.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Disarming</td>
+                                                <td>Grants chance to disarm enemy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Disarmor</td>
+                                                <td>Grants chance to disarmor enemy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Gooey</td>
+                                                <td>Flings enemy into the air.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Hallucination</td>
+                                                <td>Grants chance of trapping enemies in a fake prison.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Lifesteal</td>
+                                                <td>Steals health upon hitting enemy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Lightning</td>
+                                                <td>Chance to strike enemies with lightning.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Poison</td>
+                                                <td>Inflicts Poison upon hitting enemies.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Vampire</td>
+                                                <td>Converts damage dealt into health.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Wither</td>
+                                                <td>Inflicts Wither on enemies.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bow</td>
+                                                <td>Auto Aim</td>
+                                                <td>Automatically aims to the nearest target.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Blaze</td>
+                                                <td>Shoots blazing fireballs.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Bounty Hunter</td>
+                                                <td>Grants chance to obtain treasure from hitting enemies.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Bombardment</td>
+                                                <td>Bombard enemies with TNT when shot.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Grappling</td>
+                                                <td>Pulls you to the arrow. If enemy is hit, the enemy will be pulled to
+                                                    you.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Headhunter</td>
+                                                <td>Headshots deal more damage.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Healing</td>
+                                                <td>Heals target for inflicted damage + extra health.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Homing</td>
+                                                <td>Arrow will home in on the nearest entity.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Missile</td>
+                                                <td>Spawns TNT where arrow lands.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Molotov</td>
+                                                <td>Starts a fire where arrow lands.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Paralyze</td>
+                                                <td>Inflicts Slowness, Blindness, and Weakness upon hitting enemies.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Piercing</td>
+                                                <td>Ignores armor when dealing damage.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Porkified</td>
+                                                <td>Oink! Shoots pigs, leaving a mysterious pork behind when killed.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Shuffle</td>
+                                                <td>Switches position with target.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Volley</td>
+                                                <td>Shoots multiple arrows in a cone shape.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Wither Skull</td>
+                                                <td>Shoots wither skulls.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tools</td>
+                                                <td>Driller</td>
+                                                <td>Drills a 3 by 3 hole.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Energizing</td>
+                                                <td>Gain Haste when a block is broken.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Explosive</td>
+                                                <td>Causes an explosion when a block is broken.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Quickening</td>
+                                                <td>Gain Speed for upon breaking block.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Smelting</td>
+                                                <td>Automatically smelts drop when block is broken.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Telepathy</td>
+                                                <td>Automatically puts drops into inventory.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pickaxe</td>
+                                                <td>Haste</td>
+                                                <td>Gain Haste while tool is held.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Oxygenate</td>
+                                                <td>Gain Water Breathing while item is held.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Jackpot</td>
+                                                <td>Grants chance to increase ore tier.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Axe</td>
+                                                <td>Lumberjack</td>
+                                                <td>Breaks all logs connected to each other.<br/></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hoe</td>
+                                                <td>Farmer</td>
+                                                <td>Automatically replaces seeds when crop is broken.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Fertilizer</td>
+                                                <td>Tills land in a radius dependent on enchantment level.</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Harvest</td>
+                                                <td>Harvest crops in a radius dependent on enchantment level.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Damageable</td>
+                                                <td>Autorepair</td>
+                                                <td>Items automatically repair while moving</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Global</td>
+                                                <td>Soulbound</td>
+                                                <td>Keeps item after death, but removes a level from armor.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Compass</td>
+                                                <td>Radar</td>
+                                                <td>Points towards the nearest player.</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ac-ice" role="tablist">
+                        <div class="card">
+                            <div class="card-header" role="tab">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" aria-expanded="false" aria-controls="ac-ice .item"
+                                       href="#ac-ice .item">Incompatible Custom Enchants</a>
+                                </h5>
+                            </div>
+                            <div class="collapse hide item" role="tabpanel" data-parent="#ac-ice">
+                                <div class="card-body">
+                                    <div class="table-responsive table-bordered table-hover text-nowrap table-fixed-width">
+                                        <table class="table">
+                                            <thead>
+                                            <tr class="thead-light">
+                                                <th>Enchantment</th>
+                                                <th>Incompatible Enchants</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>Blaze</td>
+                                                <td>Porkified</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Wither Skull</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Grappling</td>
+                                                <td>Volley</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Grow</td>
+                                                <td>Shrink</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Homing</td>
+                                                <td>Blaze</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Porkified</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Wither Skull</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Porkified</td>
+                                                <td>Wither Skull</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-</div><div id="ac-ce" role="tablist">
-    <div class="card">
-        <div class="card-header" role="tab">
-            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-ce .item" href="#ac-ce .item">Custom Enchants</a></h5>
-        </div>
-        <div class="collapse hide item" role="tabpanel" data-parent="#ac-ce">
-            <div class="card-body">
-                <p>Any custom enchants that you want to be added? Submit your ideas <a href="https://docs.google.com/forms/d/e/1FAIpQLScfWdk8OyQ6NNw6KiJxP_4CH4GHnKlaFr4VfZIQojk7OPlyoQ/viewform">here<a/>!</p>
-                <div class="table-responsive table-bordered table-hover text-nowrap table-fixed-width">
-                    <table class="table">
-                        <thead>
-                            <tr class="thead-light">
-                                <th>Type</th>
-                                <th>Enchantment</th>
-                                <th>Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Armor</td>
-                                <td>Anti-Knockback</td>
-                                <td>Reduces knockback per armor piece.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Armored</td>
-                                <td>Sword-inflicted damage is reduced.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Berseker</td>
-                                <td>Gain strength when low on health.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Cactus</td>
-                                <td>Deal damage to nearby enemies.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Cloaking</td>
-                                <td>Gain invisibility when hit.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Cursed</td>
-                                <td>Inflicts Wither upon hitting enemy.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Drunk</td>
-                                <td>Inflicts Slowness, Mining Fatigue, and Nausea upon hitting enemy.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Endershift</td>
-                                <td>Gain Speed and Absorption when low on health.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Enlighted</td>
-                                <td>Gain Regeneration when hit.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Forcefield</td>
-                                <td>Deflects projectiles and living entities in a radius dependent on enchantment level.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Frozen</td>
-                                <td>Inflicts Slowness upon hitting enemy.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Hardened</td>
-                                <td>Inflicts Weakness upon hitting enemy.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Heavy</td>
-                                <td>Axe-inflicted damage is reduced.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Molten</td>
-                                <td>Sets an enemy on fire when hit.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Obsidian Shield</td>
-                                <td>Gain Fire Resistance while equipped.<br /></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Overload</td>
-                                <td>Gives extra health (stackable).</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Poisoned</td>
-                                <td>Inflicts Poison when hit by an enemy.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Poisonous Cloud</td>
-                                <td>Creates a cloud of poison around entity, giving poison to anyone who enters.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Revive</td>
-                                <td>Gain another life, but removes a level from armor.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Revulsion</td>
-                                <td>Inflicts Nausea for when hit by an enemy.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Self Destruct</td>
-                                <td>Spawns TNT when you die.<br /></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Shielded</td>
-                                <td>Gives Resistance while worn (stackable).</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Tank</td>
-                                <td>Decreases damage from bows.</td>
-                            </tr>
-                            <tr>
-                                <td>Helmet</td>
-                                <td>Antitoxin</td>
-                                <td>Grants immunity to poison.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Focused</td>
-                                <td>Negates or reduces the effects of nausea.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Glowing</td>
-                                <td>Gain Night Vision while equipped.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Implants</td>
-                                <td>Replenishes hunger and air when moving.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Meditation</td>
-                                <td>Replenishes health and hunger every 20 seconds when not moving.</td>
-                            </tr>
-                            <tr>
-                                <td>Chestplate</td>
-                                <td>Chicken</td>
-                                <td>Lay eggs every 5 minutes with a chance of rare drop.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Enraged</td>
-                                <td>Gain Strength while equipped.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Parachute</td>
-                                <td>Slows your descent above 3 blocks.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Prowl</td>
-                                <td>Gain Invisibility and Slowness while sneaking.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Spider</td>
-                                <td>Ability to climb walls.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Vacuum</td>
-                                <td>Suck up nearby items.</td>
-                            </tr>
-                            <tr>
-                                <td>Boots</td>
-                                <td>Gears</td>
-                                <td>Gain Speed while equipped.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Jetpack</td>
-                                <td>Flies in the direction you are facing when you sneak.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Magma Walker</td>
-                                <td>Temporarily turns lava into obsidian around you.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Springs</td>
-                                <td>Gain a small jump boost.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Stomp</td>
-                                <td>Deal damage to enemy when taking fall damage.</td>
-                            </tr>
-                            <tr>
-                                <td>Weapon</td>
-                                <td>Aerial</td>
-                                <td>While in air, damage increases.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Backstab</td>
-                                <td>Backstabbing enemies deals increased damage.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Blessed</td>
-                                <td>Grants a chance to remove harmful effects during combat.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Blind</td>
-                                <td>Inflicts Blindness upon hitting enemies.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Charge</td>
-                                <td>Damage increases while sprinting.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Cripple</td>
-                                <td>Inflicts Nausea and Slowness upon hitting enemy.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Deathbringer</td>
-                                <td>Increases damage inflicted.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Deep Wounds</td>
-                                <td>Inflict on enemies deep wounds that cause bleeding.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Disarming</td>
-                                <td>Grants chance to disarm enemy.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Disarmor</td>
-                                <td>Grants chance to disarmor enemy.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Gooey</td>
-                                <td>Flings enemy into the air.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Hallucination</td>
-                                <td>Grants chance of trapping enemies in a fake prison.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Lifesteal</td>
-                                <td>Steals health upon hitting enemy.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Lightning</td>
-                                <td>Chance to strike enemies with lightning.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Poison</td>
-                                <td>Inflicts Poison upon hitting enemies.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Vampire</td>
-                                <td>Converts damage dealt into health.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Wither</td>
-                                <td>Inflicts Wither on enemies.</td>
-                            </tr>
-                            <tr>
-                                <td>Bow</td>
-                                <td>Auto Aim</td>
-                                <td>Automatically aims to the nearest target.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Blaze</td>
-                                <td>Shoots blazing fireballs.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Bounty Hunter</td>
-                                <td>Grants chance to obtain treasure from hitting enemies.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Bombardment</td>
-                                <td>Bombard enemies with TNT when shot.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Grappling</td>
-                                <td>Pulls you to the arrow. If enemy is hit, the enemy will be pulled to you.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Headhunter</td>
-                                <td>Headshots deal more damage.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Healing</td>
-                                <td>Heals target for inflicted damage + extra health.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Homing</td>
-                                <td>Arrow will home in on the nearest entity.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Missile</td>
-                                <td>Spawns TNT where arrow lands.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Molotov</td>
-                                <td>Starts a fire where arrow lands.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Paralyze</td>
-                                <td>Inflicts Slowness, Blindness, and Weakness upon hitting enemies.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Piercing</td>
-                                <td>Ignores armor when dealing damage.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Porkified</td>
-                                <td>Oink! Shoots pigs, leaving a mysterious pork behind when killed.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Shuffle</td>
-                                <td>Switches position with target.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Volley</td>
-                                <td>Shoots multiple arrows in a cone shape.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Wither Skull</td>
-                                <td>Shoots wither skulls.</td>
-                            </tr>
-                            <tr>
-                                <td>Tools</td>
-                                <td>Driller</td>
-                                <td>Drills a 3 by 3 hole.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Energizing</td>
-                                <td>Gain Haste when a block is broken.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Explosive</td>
-                                <td>Causes an explosion when a block is broken.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Quickening</td>
-                                <td>Gain Speed for upon breaking block.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Smelting</td>
-                                <td>Automatically smelts drop when block is broken.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Telepathy</td>
-                                <td>Automatically puts drops into inventory.</td>
-                            </tr>
-                            <tr>
-                                <td>Pickaxe</td>
-                                <td>Haste</td>
-                                <td>Gain Haste while tool is held.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Oxygenate</td>
-                                <td>Gain Water Breathing while item is held.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Jackpot</td>
-                                <td>Grants chance to increase ore tier.</td>
-                            </tr>
-                            <tr>
-                                <td>Axe</td>
-                                <td>Lumberjack</td>
-                                <td>Breaks all logs connected to each other.<br /></td>
-                            </tr>
-                            <tr>
-                                <td>Hoe</td>
-                                <td>Farmer</td>
-                                <td>Automatically replaces seeds when crop is broken.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Fertilizer</td>
-                                <td>Tills land in a radius dependent on enchantment level.</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Harvest</td>
-                                <td>Harvest crops in a radius dependent on enchantment level.</td>
-                            </tr>
-                            <tr>
-                                <td>Damageable</td>
-                                <td>Autorepair</td>
-                                <td>Items automatically repair while moving</td>
-                            </tr>
-                            <tr>
-                                <td>Global</td>
-                                <td>Soulbound</td>
-                                <td>Keeps item after death, but removes a level from armor.</td>
-                            </tr>
-                            <tr>
-                                <td>Compass</td>
-                                <td>Radar</td>
-                                <td>Points towards the nearest player.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div><div id="ac-ice" role="tablist">
-    <div class="card">
-        <div class="card-header" role="tab">
-            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-ice .item" href="#ac-ice .item">Incompatible Custom Enchants</a></h5>
-        </div>
-        <div class="collapse hide item" role="tabpanel" data-parent="#ac-ice">
-            <div class="card-body">
-                <div class="table-responsive table-bordered table-hover text-nowrap table-fixed-width">
-                    <table class="table">
-                        <thead>
-                            <tr class="thead-light">
-                                <th>Enchantment</th>
-                                <th>Incompatible Enchants</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Blaze</td>
-                                <td>Porkified</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Wither Skull</td>
-                            </tr>
-                            <tr>
-                                <td>Grappling</td>
-                                <td>Volley</td>
-                            </tr>
-                            <tr>
-                                <td>Grow</td>
-                                <td>Shrink</td>
-                            </tr>
-                            <tr>
-                                <td>Homing</td>
-                                <td>Blaze</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Porkified</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Wither Skull</td>
-                            </tr>
-                            <tr>
-                                <td>Porkified</td>
-                                <td>Wither Skull</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div></li>
-                </ul>
-            </div>
-        </div>
-        <footer>
-            <p style="font-size: 8px;">Last Updated: November 7, 2019</p>
-        </footer>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
+    <footer>
+        <p style="font-size: 8px;">Last Updated: November 7, 2019</p>
+    </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.min.js"></script>
 </body>
 
 </html>

@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>PiggyDocs</title>
-    <meta name="description" content="PiggyDocs is a site documenting the configuration, usage, and API of DaPigGuy's plugins.">
-    <meta property="og:description" content="PiggyDocs is a site documenting the configuration, usage, and API of DaPigGuy's plugins.">
+    <meta name="description"
+          content="PiggyDocs is a site documenting the configuration, usage, and API of DaPigGuy's plugins.">
+    <meta property="og:description"
+          content="PiggyDocs is a site documenting the configuration, usage, and API of DaPigGuy's plugins.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="PiggyDocs">
     <meta property="og:image" content="../assets/img/icons/PiggyDocs256.jpg">
@@ -21,244 +23,283 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
-        <div class="container-fluid"><a class="navbar-brand" href="index.html">PiggyDocs</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse"
-                id="navcol-1">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyBackpacks.html">PiggyBackpacks</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCrates.html">PiggyCrates</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCustomEnchants.html">PiggyCustomEnchants</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCustomEnchantsShop.html">PiggyCustomEnchantsShop</a></li>
-                    <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Archive&nbsp;</a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="archive/PiggyShopUI.html">PiggyShopUI<br></a><a class="dropdown-item" role="presentation" href="archive/PiggyTutorials.html">PiggyTutorials<br></a><a class="dropdown-item" role="presentation"><br></a></div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container mg-top-16px">
-        <div class="row">
-            <div class="col">
-                <h1>PiggyCrates<a class="notd" href="https://github.com/DaPigGuy/PiggyCrates/" target="_blank">
-    <i class="fa fa-github fa-md ico-hover"></i>
-</a><a class="notd" href="javascript:void(0)" onclick="getLatestDownload('PiggyCrates'); return false;">
-    <i class="fa fa-download fa-md ico-hover"></i>
-</a></h1>
-                <p>PiggyCrates's documentation page includes the configuration documentation.<br></p>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <h3>Information</h3>
-                        <p>PiggyCrates is a simple and customizable crates plugin with roulettes, supporting both custom and vanilla enchantments.<br><br>As of October 19, 2019, PiggyCrates has been completely rewritten from scratch. Click the box below
-                            to learn more.<br></p><div role="tablist" id="ac-v2">
-    <div class="card">
-        <div role="tab" class="card-header">
-            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-v2 .item" href="#ac-v2 .item">Version 2.0.0 - changes</a></h5>
-        </div>
-        <div role="tabpanel" data-parent="#ac-v2" class="collapse hide item">
-            <div class="card-body">
-                <p class="card-text">Version 2.0.0 is a complete rewrite of the plugin and introduces tons of bug fixes, optimizations, and quality of life changes.</p>
-                <ul>
-                    <li>Now using Commando virion for command handling.</li>
-                    <li>Crates are now saved as tiles.</li>
-                    <li>Floating text particles have been added.</li>
-                    <li>Crate roulettes have been added.</li>
-                    <li>Crate items now support NBT.</li>
-                    <li>Crate items now support custom name/lore.</li>
-                </ul>
-            </div>
+<nav class="navbar navbar-light navbar-expand-md navigation-clean">
+    <div class="container-fluid"><a class="navbar-brand" href="index.html">PiggyDocs</a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse"
+             id="navcol-1">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item" role="presentation"><a class="nav-link"
+                                                            href="PiggyBackpacks.html">PiggyBackpacks</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCrates.html">PiggyCrates</a>
+                </li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCustomEnchants.html">PiggyCustomEnchants</a>
+                </li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCustomEnchantsShop.html">PiggyCustomEnchantsShop</a>
+                </li>
+                <li class="dropdown nav-item">
+                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Archive&nbsp;</a>
+                    <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" role="presentation" href="archive/PiggyShopUI.html">PiggyShopUI<br></a>
+                        <a class="dropdown-item" role="presentation"
+                           href="archive/PiggyTutorials.html">PiggyTutorials<br></a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-</div></li>
-                    <li class="list-group-item"><div id="ac-conf" role="tablist">
-    <div class="card">
-        <div class="card-header" role="tab">
-            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-conf .item" href="#ac-conf .item">Configuration</a></h5>
-        </div>
-        <div class="collapse hide item" role="tabpanel" data-parent="#ac-conf">
-            <div class="card-body">
-                <h4>Default Configuration</h4>
-                <script src="https://gist.github.com/Aericio/e74a92e37923e7fc1f03f197a2ee974f.js"></script>
-                <h4>Explanation</h4>
-                <div class="table-responsive table-bordered table-hover">
-                    <table class="table">
-                        <thead>
-                            <tr class="thead-light">
-                                <th>Key</th>
-                                <th>Index</th>
-                                <th>Explanation</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>keys</td>
-                                <td>id</td>
-                                <td>Specifies the item that should be used to act as a "key" for the crate.<br/><br/>
-                                    Accepted values: <code>item id</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>meta</td>
-                                <td>Specifies the meta value for the key item.<br/><br/>
-                                    Accepted values: <code>item meta</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>name</td>
-                                <td>Specifies the name of the key item.<br/><br/>
-                                    Accepted values: <code>item name</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>lore</td>
-                                <td>Specifies the lore (the text under the name) of the key item.<br/>
-                                    You can add multiple lines in lore by adding <code>\n</code>.<br/>
-                                    Example: <code>lore: "Line #1\nLine #2\nLine #3"</code><br/><br/>
-                                    Accepted values: <code>item lore</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>crates</td>
-                                <td>mode</td>
-                                <td>Whether to instantly give items or open the roulette menu.<br/>
-                                    If <code>roulette</code> is selected, you can define duration and speed of roulette in the following section.<br/><br/>
-                                    Accepted values: <code>instant, roulette</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>roulette.duration</td>
-                                <td>Determines the length of the roulette in ticks (20 ticks = 1 second).<br/><br/>
-                                    Accepted values: <code>roulette duration</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>roulette.speed</td>
-                                <td>Determines the speed at which the roulette items should shift left.<br/><br/>
-                                    Accepted values: <code>roulette speed</code>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+</nav>
+<div class="container mg-top-16px">
+    <div class="row">
+        <div class="col">
+            <h1>PiggyCrates<a class="notd" href="https://github.com/DaPigGuy/PiggyCrates/" target="_blank">
+                <i class="fa fa-github fa-md ico-hover"></i>
+            </a><a class="notd" href="javascript:void(0)" onclick="getLatestDownload('PiggyCrates'); return false;">
+                <i class="fa fa-download fa-md ico-hover"></i>
+            </a></h1>
+            <p>PiggyCrates's documentation page includes the configuration documentation.<br></p>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h3>Information</h3>
+                    <p>PiggyCrates is a simple and customizable crates plugin with roulettes, supporting both custom and
+                        vanilla enchantments.<br><br>As of October 19, 2019, PiggyCrates has been completely rewritten
+                        from scratch. Click the box below
+                        to learn more.<br></p>
+                    <div role="tablist" id="ac-v2">
+                        <div class="card">
+                            <div role="tab" class="card-header">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" aria-expanded="false" aria-controls="ac-v2 .item"
+                                       href="#ac-v2 .item">Version 2.0.0 - changes</a>
+                                </h5>
+                            </div>
+                            <div role="tabpanel" data-parent="#ac-v2" class="collapse hide item">
+                                <div class="card-body">
+                                    <p class="card-text">Version 2.0.0 is a complete rewrite of the plugin and
+                                        introduces tons of bug fixes, optimizations, and quality of life changes.</p>
+                                    <ul>
+                                        <li>Now using Commando virion for command handling.</li>
+                                        <li>Crates are now saved as tiles.</li>
+                                        <li>Floating text particles have been added.</li>
+                                        <li>Crate roulettes have been added.</li>
+                                        <li>Crate items now support NBT.</li>
+                                        <li>Crate items now support custom name/lore.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div id="ac-conf" role="tablist">
+                        <div class="card">
+                            <div class="card-header" role="tab">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" aria-expanded="false" aria-controls="ac-conf .item"
+                                       href="#ac-conf .item">Configuration</a>
+                                </h5>
+                            </div>
+                            <div class="collapse hide item" role="tabpanel" data-parent="#ac-conf">
+                                <div class="card-body">
+                                    <h4>Default Configuration</h4>
+                                    <script src="https://gist.github.com/Aericio/e74a92e37923e7fc1f03f197a2ee974f.js"></script>
+                                    <h4>Explanation</h4>
+                                    <div class="table-responsive table-bordered table-hover">
+                                        <table class="table">
+                                            <thead>
+                                            <tr class="thead-light">
+                                                <th>Key</th>
+                                                <th>Index</th>
+                                                <th>Explanation</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>keys</td>
+                                                <td>id</td>
+                                                <td>Specifies the item that should be used to act as a "key" for the
+                                                    crate.<br/><br/>
+                                                    Accepted values: <code>item id</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>meta</td>
+                                                <td>Specifies the meta value for the key item.<br/><br/>
+                                                    Accepted values: <code>item meta</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>name</td>
+                                                <td>Specifies the name of the key item.<br/><br/>
+                                                    Accepted values: <code>item name</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>lore</td>
+                                                <td>Specifies the lore (the text under the name) of the key item.<br/>
+                                                    You can add multiple lines in lore by adding <code>\n</code>.<br/>
+                                                    Example: <code>lore: "Line #1\nLine #2\nLine #3"</code><br/><br/>
+                                                    Accepted values: <code>item lore</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>crates</td>
+                                                <td>mode</td>
+                                                <td>Whether to instantly give items or open the roulette menu.<br/>
+                                                    If <code>roulette</code> is selected, you can define duration and
+                                                    speed of roulette in the following section.<br/><br/>
+                                                    Accepted values: <code>instant, roulette</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>roulette.duration</td>
+                                                <td>Determines the length of the roulette in ticks (20 ticks = 1
+                                                    second).<br/><br/>
+                                                    Accepted values: <code>roulette duration</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>roulette.speed</td>
+                                                <td>Determines the speed at which the roulette items should shift
+                                                    left.<br/><br/>
+                                                    Accepted values: <code>roulette speed</code>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ac-crconf" role="tablist">
+                        <div class="card">
+                            <div class="card-header" role="tab">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" aria-expanded="false" aria-controls="ac-crconf .item"
+                                       href="#ac-crconf .item">Crates Configuration</a>
+                                </h5>
+                            </div>
+                            <div class="collapse hide item" role="tabpanel" data-parent="#ac-crconf">
+                                <div class="card-body">
+                                    <h4>Default Configuration</h4>
+                                    <script src="https://gist.github.com/Aericio/53f37d1eb54bcf6d01e5d465d18545c5.js"></script>
+                                    <h4>Explanation</h4>
+                                    <div class="table-responsive table-bordered table-hover">
+                                        <table class="table">
+                                            <thead>
+                                            <tr class="thead-light">
+                                                <th>Key</th>
+                                                <th>Index</th>
+                                                <th>Data</th>
+                                                <th>Explanation</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>crates.crate_type</td>
+                                                <td>drops</td>
+                                                <td>id</td>
+                                                <td>Specifies the id of the drop item.<br/><br/>
+                                                    Accepted values: <code>item id</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>meta</td>
+                                                <td>Specifies the meta of the drop item.<br/><br/>
+                                                    Accepted values: <code>item meta</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>amount</td>
+                                                <td>Specifies the amount of items that should be given.<br/><br/>
+                                                    Accepted values: <code>number of items</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>chance</td>
+                                                <td>Specifies the chance of recieving the drop item.<br/>
+                                                    The accumulative chance values of all drops should equal to
+                                                    100.<br/><br/>
+                                                    Accepted values: <code>drop chance</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>name</td>
+                                                <td>Specifies the name of the drop item. (optional)<br/><br/>
+                                                    Accepted values: <code>item name</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>lore</td>
+                                                <td>Specifies the lore (the text under the name) of the drop item.
+                                                    (optional)<br/><br/>
+                                                    Accepted values: <code>item lore</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>nbt</td>
+                                                <td>Specifies NBT tags on the drop item. (optional)<br/>
+                                                    Any JSON-ified strings will work for NBT tags. Refer <a
+                                                            href="https://minecraft.gamepedia.com/Tutorials/Command_NBT_tags#Items">here</a>
+                                                    for possible vanilla NBT tags.<br/><br/>
+                                                    Accepted values: <code>json</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>enchants</td>
+                                                <td>Specifies vanilla or custom enchants to apply onto the drop item.
+                                                    (optional)<br/>
+                                                    PiggyCustomEnchants support is added by default.<br/><br/>
+                                                    Accepted values: <code>enchants => name, level</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>amount</td>
+                                                <td></td>
+                                                <td>Specifies the amount of times that the crate should roll with only
+                                                    one key.<br/><br/>
+                                                    Accepted values: <code>number of rolls</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>drops</td>
+                                                <td></td>
+                                                <td>Specifies the content of the floating text above the
+                                                    crate.<br/><br/>
+                                                    Accepted values: <code>text</code></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-</div><div id="ac-crconf" role="tablist">
-    <div class="card">
-        <div class="card-header" role="tab">
-            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-crconf .item" href="#ac-crconf .item">Crates Configuration</a></h5>
-        </div>
-        <div class="collapse hide item" role="tabpanel" data-parent="#ac-crconf">
-            <div class="card-body">
-                <h4>Default Configuration</h4>
-                <script src="https://gist.github.com/Aericio/53f37d1eb54bcf6d01e5d465d18545c5.js"></script>
-                <h4>Explanation</h4>
-                <div class="table-responsive table-bordered table-hover">
-                    <table class="table">
-                        <thead>
-                            <tr class="thead-light">
-                                <th>Key</th>
-                                <th>Index</th>
-                                <th>Data</th>
-                                <th>Explanation</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>crates.crate_type</td>
-                                <td>drops</td>
-                                <td>id</td>
-                                <td>Specifies the id of the drop item.<br/><br/>
-                                    Accepted values: <code>item id</code></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>meta</td>
-                                <td>Specifies the meta of the drop item.<br/><br/>
-                                    Accepted values: <code>item meta</code></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>amount</td>
-                                <td>Specifies the amount of items that should be given.<br/><br/>
-                                    Accepted values: <code>number of items</code></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>chance</td>
-                                <td>Specifies the chance of recieving the drop item.<br/>
-                                    The accumulative chance values of all drops should equal to 100.<br/><br/>
-                                    Accepted values: <code>drop chance</code></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>name</td>
-                                <td>Specifies the name of the drop item. (optional)<br/><br/>
-                                    Accepted values: <code>item name</code></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>lore</td>
-                                <td>Specifies the lore (the text under the name) of the drop item. (optional)<br/><br/>
-                                    Accepted values: <code>item lore</code></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>nbt</td>
-                                <td>Specifies NBT tags on the drop item. (optional)<br/>
-                                    Any JSON-ified strings will work for NBT tags. Refer <a href="https://minecraft.gamepedia.com/Tutorials/Command_NBT_tags#Items">here</a> for possible vanilla NBT tags.<br/><br/>
-                                    Accepted values: <code>json</code></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>enchants</td>
-                                <td>Specifies vanilla or custom enchants to apply onto the drop item. (optional)<br/>
-                                    PiggyCustomEnchants support is added by default.<br/><br/>
-                                    Accepted values: <code>enchants => name, level</code></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>amount</td>
-                                <td></td>
-                                <td>Specifies the amount of times that the crate should roll with only one key.<br/><br/>
-                                    Accepted values: <code>number of rolls</code></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>drops</td>
-                                <td></td>
-                                <td>Specifies the content of the floating text above the crate.<br/><br/>
-                                    Accepted values: <code>text</code></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div></li>
-                </ul>
-            </div>
-        </div>
-        <footer>
-            <p style="font-size: 8px;">Last Updated: November 8, 2019</p>
-        </footer>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
+    <footer>
+        <p style="font-size: 8px;">Last Updated: November 8, 2019</p>
+    </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.min.js"></script>
 </body>
 
 </html>

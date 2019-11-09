@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>PiggyDocs</title>
-    <meta name="description" content="PiggyDocs is a site documenting the configuration, usage, and API of DaPigGuy's plugins.">
-    <meta property="og:description" content="PiggyDocs is a site documenting the configuration, usage, and API of DaPigGuy's plugins.">
+    <meta name="description"
+          content="PiggyDocs is a site documenting the configuration, usage, and API of DaPigGuy's plugins.">
+    <meta property="og:description"
+          content="PiggyDocs is a site documenting the configuration, usage, and API of DaPigGuy's plugins.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="PiggyDocs">
     <meta property="og:image" content="../assets/img/icons/PiggyDocs256.jpg">
@@ -21,121 +23,142 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
-        <div class="container-fluid"><a class="navbar-brand" href="index.html">PiggyDocs</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse"
-                id="navcol-1">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyBackpacks.html">PiggyBackpacks</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCrates.html">PiggyCrates</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCustomEnchants.html">PiggyCustomEnchants</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCustomEnchantsShop.html">PiggyCustomEnchantsShop</a></li>
-                    <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Archive&nbsp;</a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="archive/PiggyShopUI.html">PiggyShopUI<br></a><a class="dropdown-item" role="presentation" href="archive/PiggyTutorials.html">PiggyTutorials<br></a><a class="dropdown-item" role="presentation"><br></a></div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="container mg-top-16px">
-        <div class="row">
-            <div class="col">
-                <h1>PiggyBackpacks<a class="notd" href="https://github.com/DaPigGuy/PiggyBackpacks/" target="_blank">
-    <i class="fa fa-github fa-md ico-hover"></i>
-</a><a class="notd" href="javascript:void(0)" onclick="getLatestDownload('PiggyBackpacks'); return false;">
-    <i class="fa fa-download fa-md ico-hover"></i>
-</a></h1>
-                <p>PiggyBackpacks's documentation page includes the configuration documentation.<br></p>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <h3>Information</h3>
-                        <p>PiggyBackpacks adds backpacks (portable chests) to your server with custom bag recipes and varying sizes.<br></p>
-                    </li>
-                    <li class="list-group-item"><div id="ac-conf" role="tablist">
-    <div class="card">
-        <div class="card-header" role="tab">
-            <h5 class="mb-0"><a data-toggle="collapse" aria-expanded="false" aria-controls="ac-conf .item" href="#ac-conf .item">Configuration</a></h5>
-        </div>
-        <div class="collapse hide item" role="tabpanel" data-parent="#ac-conf">
-            <div class="card-body">
-                <h4>Default Configuration</h4>
-                <p>Slightly modified to conserve page space.</p>
-                <script src="https://gist.github.com/Aericio/29e37c9c3f7d34b2af825b2593678cdf.js"></script>
-                <h4>Explanation</h4>
-                <div class="table-responsive table-bordered table-hover">
-                    <table class="table">
-                        <thead>
-                            <tr class="thead-light">
-                                <th>Key</th>
-                                <th>Index</th>
-                                <th>Explanation</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>size</td>
-                                <td>[bag_type]</td>
-                                <td>Set inventory size of a specific bag type, maximum of 54.<br/><br/>
-                                    Accepted values: <code>bag type, inventory space</code>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                <h4>Crafting Explanation</h4>
-                <p>You can simply add more by copying and pasting the previous one, but be sure to change the type name and crafting recipe.    
-                <div class="table-responsive table-bordered table-hover">
-                    <table class="table">
-                        <thead>
-                            <tr class="thead-light">
-                                <th>Key</th>
-                                <th>Index</th>
-                                <th>Data</th>
-                                <th>Explanation</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>crafting</td>
-                                <td>bag_type</td>
-                                <td>meta</td>
-                                <td>Set damage value of backpack<br/><br/>
-                                    Accepted values: <code>integer value</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>shape</td>
-                                <td>Shape is representative by a <code>3x3</code> crafting menu; the letters are materials defined in the next section.<br/><br/>
-                                    Accepted values: <code>three items holding three characters respectively.</code>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>[materials]</td>
-                                <td>Defines which character represents which item, and how many are required.<br/><br/>
-                                    Accepted values: <code>character => item id, item meta, item count</code>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+<nav class="navbar navbar-light navbar-expand-md navigation-clean">
+    <div class="container-fluid"><a class="navbar-brand" href="index.html">PiggyDocs</a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse"
+             id="navcol-1">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item" role="presentation"><a class="nav-link"
+                                                            href="PiggyBackpacks.html">PiggyBackpacks</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCrates.html">PiggyCrates</a>
+                </li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCustomEnchants.html">PiggyCustomEnchants</a>
+                </li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="PiggyCustomEnchantsShop.html">PiggyCustomEnchantsShop</a>
+                </li>
+                <li class="dropdown nav-item">
+                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Archive&nbsp;</a>
+                    <div class="dropdown-menu" role="menu">
+                        <a class="dropdown-item" role="presentation" href="archive/PiggyShopUI.html">PiggyShopUI<br></a>
+                        <a class="dropdown-item" role="presentation" href="archive/PiggyTutorials.html">PiggyTutorials<br></a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-</div></li>
-                    <li class="list-group-item"></li>
-                </ul>
-            </div>
+</nav>
+<div class="container mg-top-16px">
+    <div class="row">
+        <div class="col">
+            <h1>PiggyBackpacks<a class="notd" href="https://github.com/DaPigGuy/PiggyBackpacks/" target="_blank">
+                <i class="fa fa-github fa-md ico-hover"></i>
+            </a><a class="notd" href="javascript:void(0)" onclick="getLatestDownload('PiggyBackpacks'); return false;">
+                <i class="fa fa-download fa-md ico-hover"></i>
+            </a></h1>
+            <p>PiggyBackpacks's documentation page includes the configuration documentation.<br></p>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h3>Information</h3>
+                    <p>PiggyBackpacks adds backpacks (portable chests) to your server with custom bag recipes and
+                        varying sizes.<br></p>
+                </li>
+                <li class="list-group-item">
+                    <div id="ac-conf" role="tablist">
+                        <div class="card">
+                            <div class="card-header" role="tab">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" aria-expanded="false" aria-controls="ac-conf .item"
+                                       href="#ac-conf .item">Configuration</a>
+                                </h5>
+                            </div>
+                            <div class="collapse hide item" role="tabpanel" data-parent="#ac-conf">
+                                <div class="card-body">
+                                    <h4>Default Configuration</h4>
+                                    <p>Slightly modified to conserve page space.</p>
+                                    <script src="https://gist.github.com/Aericio/29e37c9c3f7d34b2af825b2593678cdf.js"></script>
+                                    <h4>Explanation</h4>
+                                    <div class="table-responsive table-bordered table-hover">
+                                        <table class="table">
+                                            <thead>
+                                            <tr class="thead-light">
+                                                <th>Key</th>
+                                                <th>Index</th>
+                                                <th>Explanation</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>size</td>
+                                                <td>[bag_type]</td>
+                                                <td>Set inventory size of a specific bag type, maximum of 54.<br/><br/>
+                                                    Accepted values: <code>bag type, inventory space</code>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <h4>Crafting Explanation</h4>
+                                        <p>You can simply add more by copying and pasting the previous one, but be sure
+                                            to change the type name and crafting recipe.
+                                        <div class="table-responsive table-bordered table-hover">
+                                            <table class="table">
+                                                <thead>
+                                                <tr class="thead-light">
+                                                    <th>Key</th>
+                                                    <th>Index</th>
+                                                    <th>Data</th>
+                                                    <th>Explanation</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>crafting</td>
+                                                    <td>bag_type</td>
+                                                    <td>meta</td>
+                                                    <td>Set damage value of backpack<br/><br/>
+                                                        Accepted values: <code>integer value</code>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>shape</td>
+                                                    <td>Shape is representative by a <code>3x3</code> crafting menu; the
+                                                        letters are materials defined in the next section.<br/><br/>
+                                                        Accepted values: <code>three items holding three characters
+                                                            respectively.</code>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td>[materials]</td>
+                                                    <td>Defines which character represents which item, and how many are
+                                                        required.<br/><br/>
+                                                        Accepted values: <code>character => item id, item meta, item
+                                                            count</code>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                <li class="list-group-item"></li>
+            </ul>
         </div>
-        <footer>
-            <p style="font-size: 8px;">Last Updated: October 19, 2019</p>
-        </footer>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
+    <footer>
+        <p style="font-size: 8px;">Last Updated: October 19, 2019</p>
+    </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.min.js"></script>
 </body>
 
 </html>
