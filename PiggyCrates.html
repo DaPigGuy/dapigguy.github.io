@@ -236,22 +236,22 @@
                                                 <td></td>
                                                 <td></td>
                                                 <td>name</td>
-                                                <td>Specifies the name of the drop item. (optional)<br/><br/>
+                                                <td>(optional) Specifies the name of the drop item.<br/><br/>
                                                     Accepted values: <code>item name</code></td>
                                             </tr>
                                             <tr>
                                                 <td></td>
                                                 <td></td>
                                                 <td>lore</td>
-                                                <td>Specifies the lore (the text under the name) of the drop item.
-                                                    (optional)<br/><br/>
+                                                <td>(optional) Specifies the lore (the text under the name) of the drop
+                                                    item.<br/><br/>
                                                     Accepted values: <code>item lore</code></td>
                                             </tr>
                                             <tr>
                                                 <td></td>
                                                 <td></td>
                                                 <td>nbt</td>
-                                                <td>Specifies NBT tags on the drop item. (optional)<br/>
+                                                <td>(optional) Specifies NBT tags on the drop item.<br/>
                                                     Any JSON-ified strings will work for NBT tags. Refer <a
                                                             href="https://minecraft.gamepedia.com/Tutorials/Command_NBT_tags#Items">here</a>
                                                     for possible vanilla NBT tags.<br/><br/>
@@ -261,8 +261,8 @@
                                                 <td></td>
                                                 <td></td>
                                                 <td>enchants</td>
-                                                <td>Specifies vanilla or custom enchants to apply onto the drop item.
-                                                    (optional)<br/>
+                                                <td>(optional) Specifies vanilla or custom enchants to apply onto the
+                                                    drop item.<br/>
                                                     PiggyCustomEnchants support is added by default.<br/><br/>
                                                     Accepted values: <code>enchants => name, level</code></td>
                                             </tr>
@@ -273,6 +273,15 @@
                                                 <td>Specifies the amount of times that the crate should roll with only
                                                     one key.<br/><br/>
                                                     Accepted values: <code>number of rolls</code></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>commands</td>
+                                                <td></td>
+                                                <td>(optional) Specifies what command should be ran upon opening the
+                                                    crate.<br/><br/>
+                                                    Possible Tags: <code>{PLAYER}</code><br/>
+                                                    Accepted values: <code>array of text</code></td>
                                             </tr>
                                             <tr>
                                                 <td></td>
@@ -294,7 +303,7 @@
         </div>
     </div>
     <footer>
-        <p style="font-size: 8px;">Last Updated: November 8, 2019</p>
+        <p style="font-size: 8px;">Last Updated: December 6, 2019</p>
     </footer>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
