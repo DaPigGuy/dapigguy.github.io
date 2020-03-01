@@ -462,7 +462,6 @@
             let first = true;
             Object.keys(typeEnchantments).forEach(function (enchantment) {
                 let enchantmentInfo = typeEnchantments[enchantment];
-                console.log(enchantmentInfo);
                 $("#ceListTable").append("<tr><td>" + (first ? enchantmentInfo.type : "") + "</td><td>" + enchantment + "</td><td>" + enchantmentInfo.description + "</td></tr>");
                 first = false;
             });
